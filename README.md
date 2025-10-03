@@ -52,6 +52,42 @@ Bu laboratuvar 4 farklı prosedürden oluşmaktadır:
   - Stil dosyası oluşturma ve bağlama
   - CSS seçiciler ve özellikler
 
+### 🔬 Lab 3 - CSS Selectors & Box Model
+Bu laboratuvar 4 farklı prosedürden oluşmaktadır:
+
+#### 🎯 Prosedür 1 - CSS ID and Class Selector
+- **📁 Klasör:** `PROCEDURE 1 - CSS ID and Class Selector/`
+- **📄 Dosyalar:**
+  - `id_selection.html` - ID seçicileri (#big, #small)
+  - `class_selector.html` - Class seçicileri (.big, .small)
+  - `group_selector.html` - Grup seçicileri (h1, h2, h3)
+
+#### 🔗 Prosedür 2 - CSS Grouping
+- **📁 Klasör:** `PROCEDURE 2 - CSS Grouping/`
+- **📄 Dosyalar:**
+  - `group_selector.html` - Temel grup seçicileri
+  - `combined_selectors.html` - Kombine seçiciler (*, p, div p, div > p, p ~ div, p + div, div.box p)
+
+#### 📦 Prosedür 3 - CSS Box Model (Margin, Padding and Border)
+- **📁 Klasör:** `PROCEDURE 3 - CSS Box Model (Margin, Padding and Border)/`
+- **📄 Dosyalar:**
+  - `firstLayer.html` - HTML yapısı
+  - `firstLayer.css` - Box model özellikleri (margin, padding, border)
+
+#### 🎨 Prosedür 4 - Example Web Page Design with "div"
+- **📁 Klasör:** `PROCEDURE 4 - Example Web Page Design with "div"/`
+- **📄 Dosyalar:**
+  - `firstWebPage.html` - Div tabanlı sayfa düzeni
+  - `firstWebPage.css` - Layout CSS (float, clear, box model hesaplamaları)
+
+- **🎯 Öğrenilen Konular:**
+  - CSS ID ve Class seçicileri
+  - Kombine ve grup seçicileri
+  - CSS Box Model (Content, Padding, Border, Margin)
+  - Div ile sayfa düzeni oluşturma
+  - Float ve clear kullanımı
+  - Box model genişlik hesaplamaları
+
 ---
 
 ## 🚀 Nasıl Kullanılır
@@ -66,6 +102,8 @@ Bu laboratuvar 4 farklı prosedürden oluşmaktadır:
    cd COM5005-WebProgramming/Lab\ 1/
    # veya
    cd COM5005-WebProgramming/Lab\ 2/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 3/
    ```
 
 3. **🌐 HTML dosyalarını web tarayıcısında açın:**

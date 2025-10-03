@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style type="text/css">
+            
+            /* Selects all tags */
+            * {
+                margin: 5px;
+            }
+            
+            /* Selects all p tags */
+            p {
+                color: blue;
+                font-size: 14pt;
+            }
+            
+            /* Selects all p tags contained within div tags */
+            div p {
+                background-color: lightgray;
+            }
+            
+            /* Selects all div and all p tags */
+            div, p {
+                border: 1px solid black;
+            }
+            
+            /* Selects all p tags whose parent tag is div */
+            div > p {
+                font-weight: bold;
+            }
+            
+            /* Selects all div tags at the same level after p */
+            p ~ div {
+                color: green;
+            }
+            
+            /* Selects the first div tag of the same level after p */
+            p + div {
+                text-decoration: underline;
+            }
+            
+            /* Selects the p paragraphs with the label whose class name is box inside the div */
+            div.box p {
+                font-style: italic;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2>CSS Combined Selectors Examples</h2>
+        
+        <p>This is a paragraph outside any div.</p>
+        
+        <div>
+            <p>This is a paragraph inside a div (child of div).</p>
+        </div>
+        
+        <div class="box">
+            <p>This paragraph is inside a div with class "box".</p>
+        </div>
+        
+        <p>This is another paragraph.</p>
+        
+        <div>First div after p (p + div selector applies here)</div>
+        <div>Second div after p (p ~ div selector applies here too)</div>
+        
+        <section>
+            <p>This paragraph is inside a section, not a div.</p>
+        </section>
+        
+    </body>
+</html>

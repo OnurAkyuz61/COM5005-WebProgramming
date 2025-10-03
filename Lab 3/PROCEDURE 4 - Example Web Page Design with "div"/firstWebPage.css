@@ -1,0 +1,51 @@
+/* CSS Document */
+
+#mainLayer {
+    width: 1000px;
+    margin: auto;
+}
+
+#topLayer {
+    background-color: aqua;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+#leftLayer {
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    margin: 0px 5px 0px 0px;
+    padding: 5px;
+    width: 183px;
+    float: left;
+}
+
+#middleLayer {
+    background-color: hotpink;
+    border: 1px solid black;
+    margin: 0px 5px 0px 5px;
+    padding: 5px;
+    width: 378px;
+    float: left;
+}
+
+#rightLayer {
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    margin: 0px 0px 0px 5px;
+    padding: 5px;
+    width: 383px;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+#bottomLayer {
+    background-color: coral;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
