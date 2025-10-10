@@ -88,6 +88,57 @@ Bu laboratuvar 4 farklı prosedürden oluşmaktadır:
   - Float ve clear kullanımı
   - Box model genişlik hesaplamaları
 
+### 🔬 Lab 4 - JavaScript Temelleri
+Bu laboratuvar 7 farklı prosedürden oluşmaktadır:
+
+#### 💡 Prosedür 1 - What is JavaScript?
+- **📁 Klasör:** `PROCEDURE 1 – What is JavaScript?/`
+- **📄 Dosyalar:**
+  - `index.html` - JavaScript'in ne olduğu ve temel kullanımı
+  - `external-example.html` - Harici JavaScript dosyası kullanımı
+  - `filename.js` - Harici JavaScript dosyası
+
+#### 🧪 Prosedür 2 - Testing JavaScript
+- **📁 Klasör:** `PROCEDURE 2 – Testing JavaScript/`
+- **📄 Dosyalar:**
+  - `step1.html` - Temel JavaScript test örneği
+  - `step2.html` - Gelişmiş JavaScript test örneği
+
+#### 📊 Prosedür 3 - How To Define a Variable in Javascript?
+- **📁 Klasör:** `PROCEDURE 3 – How To Define a Variable in Javascript?/`
+- **🎯 Konu:** JavaScript'te değişken tanımlama (var, let, const)
+
+#### 🔔 Prosedür 4 - JavaScript Popup Boxes
+- **📁 Klasör:** `PROCEDURE 4 – JavaScript Popup Boxes/`
+- **🎯 Konu:** Alert, confirm ve prompt kutularının kullanımı
+
+#### ➕ Prosedür 5 - JavaScript Arithmetic Operators
+- **📁 Klasör:** `PROCEDURE 5 – JavaScript Arithmetic Operators/`
+- **🎯 Konu:** Aritmetik operatörler (+, -, *, /, %, ++, --)
+
+#### 🔀 Prosedür 6 - Using JavaScript "IF… ELSE"
+- **📁 Klasör:** `PROCEDURE 6 – Using JavaScript "IF… ELSE"/`
+- **🎯 Konu:** Koşullu ifadeler ve karar yapıları
+
+#### 🔄 Prosedür 7 - Using JavaScript "FOR" Loop
+- **📁 Klasör:** `PROCEDURE 7 – Using JavaScript "FOR" Loop/`
+- **🎯 Konu:** For döngüsü kullanımı ve iterasyon
+
+#### 💪 Exercise - Uygulama Örnekleri
+- **📁 Klasör:** `EXERCISE/`
+- **📄 Dosyalar:**
+  - `exercise.html` - Temel JavaScript egzersizleri
+  - `exercise-exact.html` - Detaylı JavaScript uygulamaları
+
+- **🎯 Öğrenilen Konular:**
+  - JavaScript'in temel yapısı ve kullanımı
+  - Değişken tanımlama ve veri tipleri
+  - Popup kutularıyla kullanıcı etkileşimi
+  - Aritmetik operatörler ve hesaplamalar
+  - Koşullu ifadeler (if-else)
+  - Döngü yapıları (for loop)
+  - JavaScript'i HTML'e entegre etme yöntemleri
+
 ---
 
 ## 🚀 Nasıl Kullanılır
@@ -104,6 +155,8 @@ Bu laboratuvar 4 farklı prosedürden oluşmaktadır:
    cd COM5005-WebProgramming/Lab\ 2/
    # veya
    cd COM5005-WebProgramming/Lab\ 3/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 4/
    ```
 
 3. **🌐 HTML dosyalarını web tarayıcısında açın:**
@@ -129,6 +182,10 @@ Bu laboratuvar çalışmaları ile öğrenciler:
 - ✅ Frame yapısını anlar (HTML5'te deprecated olsa da)
 - ✅ Tablo ve liste oluşturma becerisi kazanır
 - ✅ Web sayfası düzenleme pratiği yapar
+- ✅ JavaScript'in temel yapısını ve kullanımını öğrenir
+- ✅ Değişkenler ve veri tipleri ile çalışır
+- ✅ Koşullu ifadeler ve döngüler kullanır
+- ✅ Kullanıcı etkileşimi ve popup kutaları oluşturur
 
 ---
 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Check - IF...ELSE Example</title>
+</head>
+<body>
+    <h1>Driver's License Age Check</h1>
+    <p>Click the button to check if you can get a driver's license:</p>
+    
+    <button onclick="checkAge()">Check My Age</button>
+    <button onclick="checkAge18()">Test with Age 18+</button>
+    <button onclick="checkAge10()">Test with Age 10</button>
+    
+    <div id="result"></div>
+    
+    <script>
+        function checkAge() {
+            var age = prompt("Please enter your age:");
+            age = parseInt(age);
+            
+            if (age >= 18) {
+                alert("You can get a driver's license!");
+                document.getElementById("result").innerHTML = 
+                    "<p style='color: green;'>✓ Age " + age + ": You can get a driver's license!</p>";
+            }
+            else {
+                alert("Your age is not suitable for driving");
+                alert((18 - age) + " years later, you can use the car.");
+                document.getElementById("result").innerHTML = 
+                    "<p style='color: red;'>✗ Age " + age + ": Your age is not suitable for driving<br>" +
+                    (18 - age) + " years later, you can use the car.</p>";
+            }
+        }
+        
+        function checkAge18() {
+            var age = 20;
+            if (age >= 18) {
+                alert("You can get a driver's license!");
+                document.getElementById("result").innerHTML = 
+                    "<p style='color: green;'>✓ Age " + age + ": You can get a driver's license!</p>";
+            }
+        }
+        
+        function checkAge10() {
+            var age = 10;
+            if (age >= 18) {
+                alert("You can get a driver's license!");
+            }
+            else {
+                alert("Your age is not suitable for driving");
+                alert((18 - age) + " years later, you can use the car.");
+                document.getElementById("result").innerHTML = 
+                    "<p style='color: red;'>✗ Age " + age + ": Your age is not suitable for driving<br>" +
+                    (18 - age) + " years later, you can use the car.</p>";
+            }
+        }
+    </script>
+</body>
+</html>

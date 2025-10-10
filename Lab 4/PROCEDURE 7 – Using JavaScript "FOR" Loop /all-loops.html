@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Loops Examples</title>
+    <style>
+        .loop-section {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Loop Examples</h1>
+    
+    <div class="loop-section">
+        <h2>1. FOR Loop - Even Numbers (0-100)</h2>
+        <div id="for-loop"></div>
+    </div>
+    
+    <div class="loop-section">
+        <h2>2. FOR Loop - All Numbers (1-10)</h2>
+        <div id="for-all"></div>
+    </div>
+    
+    <div class="loop-section">
+        <h2>3. WHILE Loop Example</h2>
+        <div id="while-loop"></div>
+    </div>
+    
+    <div class="loop-section">
+        <h2>4. DO-WHILE Loop Example</h2>
+        <div id="do-while-loop"></div>
+    </div>
+    
+    <script>
+        // FOR Loop - Even numbers from 0 to 100
+        var forOutput = "";
+        for (var i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                forOutput += "Number:" + i + "<br/>";
+            }
+        }
+        document.getElementById("for-loop").innerHTML = forOutput;
+        
+        // FOR Loop - All numbers from 1 to 10
+        var forAllOutput = "";
+        for (var j = 1; j <= 10; j++) {
+            forAllOutput += "Number: " + j + "<br/>";
+        }
+        document.getElementById("for-all").innerHTML = forAllOutput;
+        
+        // WHILE Loop
+        var whileOutput = "";
+        var k = 1;
+        while (k <= 5) {
+            whileOutput += "While Loop - Count: " + k + "<br/>";
+            k++;
+        }
+        document.getElementById("while-loop").innerHTML = whileOutput;
+        
+        // DO-WHILE Loop
+        var doWhileOutput = "";
+        var m = 1;
+        do {
+            doWhileOutput += "Do-While Loop - Count: " + m + "<br/>";
+            m++;
+        } while (m <= 3);
+        document.getElementById("do-while-loop").innerHTML = doWhileOutput;
+    </script>
+</body>
+</html>

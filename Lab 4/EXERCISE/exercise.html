@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise - Variables X and Y</title>
+</head>
+<body>
+
+<script>
+    // Define variables X and Y
+    // X represents numbers from 0 to 100
+    // Y represents the square of X
+    
+    var Y = 0; // Initialize Y to store sum of squares
+    
+    // Calculate squares for numbers 0 to 100
+    for (var X = 0; X <= 100; X++) {
+        Y += X * X; // Add square of X to Y
+    }
+    
+    // Check if Y equals 10000 and show warning
+    if (Y == 10000) {
+        alert("The square of the numbers from 1 to 100 has been found!");
+    }
+    
+    // Display all Y numbers (squares)
+    document.write("<h2>Square Numbers (X² for X = 0 to 100):</h2>");
+    
+    for (var X = 0; X <= 100; X++) {
+        var square = X * X;
+        document.write("Number:" + square + "<br/>");
+    }
+    
+    // Show the total sum
+    document.write("<br/><h3>Total sum of all squares: " + Y + "</h3>");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Popup Boxes</title>
+</head>
+<body>
+    <h1>JavaScript Popup Boxes</h1>
+    <p>Click the buttons to see different types of popup boxes:</p>
+    
+    <button onclick="showAlert()">Alert Box</button>
+    <button onclick="showConfirm()">Confirm Box</button>
+    <button onclick="showPrompt()">Prompt Box</button>
+    
+    <div id="result"></div>
+    
+    <script>
+        function showAlert() {
+            alert("I am an alert box!");
+        }
+        
+        function showConfirm() {
+            var result = confirm("Do you want to continue?");
+            if (result) {
+                document.getElementById("result").innerHTML = "<p>You clicked OK!</p>";
+            } else {
+                document.getElementById("result").innerHTML = "<p>You clicked Cancel!</p>";
+            }
+        }
+        
+        function showPrompt() {
+            var name = prompt("What is your name?", "Enter your name here");
+            if (name != null && name != "") {
+                document.getElementById("result").innerHTML = "<p>Hello " + name + "!</p>";
+            } else {
+                document.getElementById("result").innerHTML = "<p>No name entered.</p>";
+            }
+        }
+    </script>
+    
+</body>
+</html>

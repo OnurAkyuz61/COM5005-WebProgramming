@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Arithmetic Operators</title>
+</head>
+<body>
+    <h1>JavaScript Arithmetic Operators</h1>
+    <div id="output"></div>
+    
+    <script>
+        var a = 10;
+        var b = 3;
+        var output = "";
+        
+        output += "<h2>Basic Arithmetic Operations:</h2>";
+        output += "<p><strong>a = " + a + ", b = " + b + "</strong></p>";
+        
+        // Addition
+        output += "<p>Addition (a + b): " + (a + b) + "</p>";
+        
+        // Subtraction
+        output += "<p>Subtraction (a - b): " + (a - b) + "</p>";
+        
+        // Multiplication
+        output += "<p>Multiplication (a * b): " + (a * b) + "</p>";
+        
+        // Division
+        output += "<p>Division (a / b): " + (a / b) + "</p>";
+        
+        // Modulus
+        output += "<p>Modulus (a % b): " + (a % b) + "</p>";
+        
+        // Increment
+        var c = a;
+        c++;
+        output += "<p>Increment (a++): " + c + "</p>";
+        
+        // Decrement
+        var d = a;
+        d--;
+        output += "<p>Decrement (a--): " + d + "</p>";
+        
+        // String concatenation examples
+        output += "<h2>String Operations:</h2>";
+        var str1 = "Hello";
+        var str2 = "World";
+        var num = 5;
+        
+        output += "<p>String + String: '" + str1 + "' + '" + str2 + "' = '" + (str1 + str2) + "'</p>";
+        output += "<p>Number + String: " + num + " + '" + str1 + "' = '" + (num + str1) + "'</p>";
+        
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>

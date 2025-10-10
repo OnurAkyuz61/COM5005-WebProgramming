@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Variable Declaration Rules</title>
+</head>
+<body>
+
+<h1>JavaScript Variable Declaration Rules</h1>
+<div id="output"></div>
+
+<script>
+    var output = "";
+    
+    // Rule 1: Variable names can contain letters, numbers, underscores, and dollar signs
+    var myVariable = "Letters and numbers";
+    var my_variable = "With underscore";
+    var $myVariable = "With dollar sign";
+    var variable123 = "With numbers";
+    
+    // Rule 2: Variable names can begin with a letter, underscore, or dollar sign
+    var letter = "Starts with letter";
+    var _underscore = "Starts with underscore";
+    var $dollar = "Starts with dollar";
+    
+    // Rule 3: Variable names are CASE-sensitive (a and A are different variables)
+    var a = "lowercase a";
+    var A = "uppercase A";
+    
+    // Rule 4: No spaces are left between variable names
+    var noSpaces = "Correct variable name";
+    // var no spaces = "This would be incorrect";
+    
+    // Rule 5: JavaScript keywords cannot be used as variable names
+    // var var = "This would be incorrect";
+    // var if = "This would be incorrect";
+    
+    // Display all examples
+    output += "<h2>Variable Examples:</h2>";
+    output += "<p><strong>myVariable:</strong> " + myVariable + "</p>";
+    output += "<p><strong>my_variable:</strong> " + my_variable + "</p>";
+    output += "<p><strong>$myVariable:</strong> " + $myVariable + "</p>";
+    output += "<p><strong>variable123:</strong> " + variable123 + "</p>";
+    output += "<p><strong>letter:</strong> " + letter + "</p>";
+    output += "<p><strong>_underscore:</strong> " + _underscore + "</p>";
+    output += "<p><strong>$dollar:</strong> " + $dollar + "</p>";
+    output += "<p><strong>lowercase 'a':</strong> " + a + "</p>";
+    output += "<p><strong>uppercase 'A':</strong> " + A + "</p>";
+    output += "<p><strong>noSpaces:</strong> " + noSpaces + "</p>";
+    
+    document.getElementById("output").innerHTML = output;
+</script>
+
+</body>
+</html>

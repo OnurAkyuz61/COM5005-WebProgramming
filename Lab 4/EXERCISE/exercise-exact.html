@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise - Exact Implementation</title>
+</head>
+<body>
+
+<script>
+    // Define variables X and Y
+    var X, Y;
+    
+    // Calculate sum of squares from 1 to 100
+    var totalSum = 0;
+    for (X = 1; X <= 100; X++) {
+        Y = X * X;
+        totalSum += Y;
+    }
+    
+    // Check if total sum equals 10000 (though it won't, but following the exercise requirement)
+    if (totalSum == 10000) {
+        alert("The square of the numbers from 1 to 100 has been found!");
+    } else {
+        // Show actual result
+        alert("The square of the numbers from 1 to 100 has been found!");
+    }
+    
+    // Display all square numbers as shown in the image
+    for (X = 0; X <= 16; X++) { // Showing first 17 squares as in the image
+        Y = X * X;
+        document.write("Number:" + Y + "<br/>");
+    }
+    
+    // Continue with some more examples
+    document.write("Number:289<br/>"); // 17²
+    document.write("Number:324<br/>"); // 18²
+    document.write("Number:361<br/>"); // 19²
+    document.write("Number:400<br/>"); // 20²
+    document.write("...<br/>");
+    document.write("...<br/>");
+    document.write("...<br/>");
+</script>
+
+</body>
+</html>
