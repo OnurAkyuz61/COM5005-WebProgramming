@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form with Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            border: 3px solid black;
+            padding: 20px;
+            width: 400px;
+            margin: 0 auto;
+        }
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .form-row {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .form-row label {
+            width: 120px;
+            display: inline-block;
+        }
+        .form-row input[type="text"], 
+        .form-row input[type="email"], 
+        .form-row input[type="password"] {
+            width: 200px;
+            padding: 5px;
+        }
+        .form-row input[type="radio"] {
+            margin-right: 5px;
+        }
+        .form-row input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .hobby-section {
+            margin-left: 120px;
+        }
+        .button-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-section button {
+            margin: 0 10px;
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-title">REGISTRATION FORM</div>
+        
+        <form name="registrationForm" onsubmit="return validateForm()">
+            <div class="form-row">
+                <label>User Name:</label>
+                <input type="text" name="username" id="username">
+            </div>
+            
+            <div class="form-row">
+                <label>Name:</label>
+                <input type="text" name="name" id="name">
+            </div>
+            
+            <div class="form-row">
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="Male" id="male"> Male
+                <input type="radio" name="gender" value="Female" id="female" checked> Female
+            </div>
+            
+            <div class="form-row">
+                <label>E-Mail:</label>
+                <input type="email" name="email" id="email">
+            </div>
+            
+            <div class="form-row">
+                <label>Password:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            
+            <div class="form-row">
+                <label>Repeat Password:</label>
+                <input type="password" name="repeatPassword" id="repeatPassword">
+            </div>
+            
+            <div class="form-row">
+                <label>Hobby:</label>
+                <div class="hobby-section">
+                    <input type="checkbox" name="hobby" value="Swimming" id="swimming" checked> Swimming<br>
+                    <input type="checkbox" name="hobby" value="Running" id="running"> Running<br>
+                    <input type="checkbox" name="hobby" value="Trekking" id="trekking" checked> Trekking<br>
+                    <input type="checkbox" name="hobby" value="Reading" id="reading" checked> Reading
+                </div>
+            </div>
+            
+            <div class="button-section">
+                <button type="submit">Sign Up</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Step 1 - Verify that form elements cannot be blank
+            var username = document.forms["registrationForm"]["username"].value;
+            var name = document.forms["registrationForm"]["name"].value;
+            var email = document.forms["registrationForm"]["email"].value;
+            var password = document.forms["registrationForm"]["password"].value;
+            var repeatPassword = document.forms["registrationForm"]["repeatPassword"].value;
+            
+            // Step 2 - Check if User Name, Name, Email, and Passwords fields are not blank
+            if (username == "" || username == null) {
+                alert("User Name field cannot be blank!");
+                document.getElementById("username").focus();
+                return false;
+            }
+            
+            if (name == "" || name == null) {
+                alert("Name field cannot be blank!");
+                document.getElementById("name").focus();
+                return false;
+            }
+            
+            if (email == "" || email == null) {
+                alert("E-Mail field cannot be blank!");
+                document.getElementById("email").focus();
+                return false;
+            }
+            
+            if (password == "" || password == null) {
+                alert("Password field cannot be blank!");
+                document.getElementById("password").focus();
+                return false;
+            }
+            
+            if (repeatPassword == "" || repeatPassword == null) {
+                alert("Repeat Password field cannot be blank!");
+                document.getElementById("repeatPassword").focus();
+                return false;
+            }
+            
+            // Step 3 - Verify that Password and Repeat Password fields are the same
+            if (password != repeatPassword) {
+                alert("Password and Repeat Password fields must be the same!");
+                document.getElementById("repeatPassword").focus();
+                return false;
+            }
+            
+            // Step 4 - If entire form is filled correctly, show success message
+            alert("Form submission completed successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>

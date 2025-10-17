@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 5 - CheckBox List</title>
+</head>
+<body>
+    <h2>Step 5 - CheckBox List</h2>
+    
+    <form action="">
+        <b>Hobbies</b> <br>
+        Swimming:<input type="checkbox" name="hobby" id="hobby1" value="Swimming"> <br/>
+        Running:<input type="checkbox" name="hobby" id="hobby2" value="Running"> <br/>
+        Reading: <input type="checkbox" name="hobby" id="hobby3" value="Reading"> <br/>
+        <button type="button" id="btn"> Read Form Data</button>
+    </form>
+
+    <script>
+        //button click function
+        btn.onclick=function(){
+            if(document.forms[0].hobby1.checked == true)
+                alert("Swimming is selected.")
+            
+            if(document.forms[0].hobby2.checked == true)
+                alert("Running is selected.")
+            
+            if(document.forms[0].hobby3.checked == true)
+                alert("Reading is selected.")
+        }
+    </script>
+</body>
+</html>

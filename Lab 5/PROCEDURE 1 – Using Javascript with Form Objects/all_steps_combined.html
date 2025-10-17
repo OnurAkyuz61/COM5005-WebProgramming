@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROCEDURE 1 - All Steps Combined</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .step-container {
+            border: 2px solid #333;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .step-title {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 6px 6px 0 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .form-section {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        input, button {
+            margin: 5px;
+            padding: 8px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .main-title {
+            text-align: center;
+            color: #333;
+            border-bottom: 3px solid #333;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-title">PROCEDURE 1 – Using Javascript with Form Objects</h1>
+    <p><strong>Description:</strong> The most important objects of HTML for Javascript are Forms. The biggest element in interacting with website users is form objects.</p>
+
+    <!-- STEP 1 -->
+    <div class="step-container">
+        <div class="step-title">Step 1 – Text Object</div>
+        <p><strong>Parameters used by the Text object:</strong> Name, Name of text field; Size, The size of the text field to appear on the web page; Maxlength, Sets the maximum number of characters that can be entered.</p>
+        
+        <div class="form-section">
+            <form>
+                <label><b>Student Name:</b></label><br/>
+                <input type="text" id="name1" maxlength="5"><br/>
+                
+                <label><b>Student Surname:</b></label><br/>
+                <input type="text" id="surname1">
+            </form>
+        </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-container">
+        <div class="step-title">Step 2 - Password Field</div>
+        <p><strong>Description:</strong> These fields are used to get encrypted information. When an information is entered in this field, the characters do not appear, instead an asterisk * appears.</p>
+        
+        <div class="form-section">
+            <form>
+                <label><b>Student Name</b></label><br/>
+                <input type="text" id="name2" maxlength="5"><br/>
+                
+                <label><b>Your Password</b></label><br/>
+                <input type="password" name="password2" id="password2">
+            </form>
+        </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-container">
+        <div class="step-title">Step 3 – Button</div>
+        <p><strong>Description:</strong> There are 2 types of buttons on web forms. First, it is the Submit Button to send or receive according to the form task, and the other is the Delete(Reset) Button, which makes all the form elements return to their original state.</p>
+        
+        <div class="form-section">
+            <form>
+                <label><b>User Name</b></label><br/>
+                <input type="text" id="user3" maxlength="20"><br/>
+                
+                <label><b>Your Password</b></label><br/>
+                <input type="password" name="password3" id="pswrd3"><br/>
+                
+                <button type="submit" id="loginBtn3">Login</button>
+                <input type="reset" name="delete3" id="delBtn3" value="Reset">
+            </form>
+        </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step-container">
+        <div class="step-title">Step 4 – Radio Button</div>
+        <p><strong>Description:</strong> Radio buttons should be used when you want your user to choose between two or more options.</p>
+        
+        <div class="form-section">
+            <form>
+                <label><b>Let's Rate the Web Lesson</b></label><br/>
+                
+                <input type="radio" name="lesson4" id="radioBtn4_1" value="1"> So Hard <br/>
+                <input type="radio" name="lesson4" id="radioBtn4_2" value="2"> Hard <br/>
+                <input type="radio" name="lesson4" id="radioBtn4_3" value="3"> So-so! <br/>
+                <input type="radio" name="lesson4" id="radioBtn4_4" value="4"> Good <br/>
+                <input type="radio" name="lesson4" id="radioBtn4_5" value="5"> So Fun <br/>
+                
+                <button type="submit" id="submitBtn4">OK</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step-container">
+        <div class="step-title">Step 5 – CheckBox List</div>
+        <p><strong>Description:</strong> Data from form elements can be processed with javascript. We can use the id parameter of the form data to access the data. Thanks to the document.forms[ ].attribute method, we can use the id of the form element we want to access.</p>
+        
+        <div class="form-section">
+            <form action="">
+                <b>Hobbies</b> <br>
+                Swimming:<input type="checkbox" name="hobby5" id="hobby5_1" value="Swimming"> <br/>
+                Running:<input type="checkbox" name="hobby5" id="hobby5_2" value="Running"> <br/>
+                Reading: <input type="checkbox" name="hobby5" id="hobby5_3" value="Reading"> <br/>
+                <button type="button" id="btn5"> Read Form Data</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        //Step 5 - button click function
+        document.getElementById('btn5').onclick = function(){
+            if(document.forms[4].hobby5_1.checked == true)
+                alert("Swimming is selected.")
+            
+            if(document.forms[4].hobby5_2.checked == true)
+                alert("Running is selected.")
+            
+            if(document.forms[4].hobby5_3.checked == true)
+                alert("Reading is selected.")
+        }
+    </script>
+
+    <div style="text-align: center; margin-top: 30px; padding: 20px; background-color: #e8f4f8; border-radius: 8px;">
+        <h3>🎉 PROCEDURE 1 Complete!</h3>
+        <p>All form objects and JavaScript interactions have been demonstrated above.</p>
+    </div>
+</body>
+</html>

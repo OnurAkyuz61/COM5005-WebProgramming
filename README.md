@@ -139,6 +139,42 @@ Bu laboratuvar 7 farklı prosedürden oluşmaktadır:
   - Döngü yapıları (for loop)
   - JavaScript'i HTML'e entegre etme yöntemleri
 
+### 🔬 Lab 5 - JavaScript Form Objects & Events
+Bu laboratuvar 3 farklı prosedürden oluşmaktadır:
+
+#### 📝 Prosedür 1 - Using Javascript with Form Objects
+- **📁 Klasör:** `PROCEDURE 1 – Using Javascript with Form Objects/`
+- **📄 Dosyalar:**
+  - `step1_text_object.html` - Text input alanları (Student Name & Surname)
+  - `step2_password_field.html` - Password input alanı
+  - `step3_button.html` - Submit ve Reset butonları
+  - `step4_radio_button.html` - Radio button ile ders değerlendirme
+  - `step5_checkbox_list.html` - Checkbox listesi ve JavaScript etkileşimi
+  - `all_steps_combined.html` - Tüm adımların birleştirilmiş hali
+
+#### ⚡ Prosedür 2 - JavaScript Events
+- **📁 Klasör:** `PROCEDURE 2 – JavaScript Events/`
+- **📄 Dosyalar:**
+  - `step1_basic_button.html` - JavaScript olmadan temel buton
+  - `step2_onclick_alert.html` - onclick event ile alert ve HTML events tablosu
+  - `step3_football_teams.html` - Futbol takımları butonları ile stil manipülasyonu
+  - `all_steps_combined.html` - Tüm adımların birleştirilmiş hali
+
+#### ✅ Prosedür 3 - Validation Rules with Javascript
+- **📁 Klasör:** `PROCEDURE 3 – Validation Rules with Javascript/`
+- **📄 Dosyalar:**
+  - `registration_form.html` - Tam doğrulama kuralları ile kayıt formu
+
+- **🎯 Öğrenilen Konular:**
+  - HTML Form elemanları (input, button, radio, checkbox)
+  - JavaScript ile form verilerine erişim
+  - Event handling (onclick, onchange, onsubmit)
+  - Form doğrulama (validation) teknikleri
+  - DOM manipülasyonu ve stil değişiklikleri
+  - document.forms[] kullanımı
+  - getElementById() ve element özellikleri
+  - Alert, focus ve form kontrol yöntemleri
+
 ---
 
 ## 🚀 Nasıl Kullanılır
@@ -157,6 +193,8 @@ Bu laboratuvar 7 farklı prosedürden oluşmaktadır:
    cd COM5005-WebProgramming/Lab\ 3/
    # veya
    cd COM5005-WebProgramming/Lab\ 4/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 5/
    ```
 
 3. **🌐 HTML dosyalarını web tarayıcısında açın:**
@@ -186,6 +224,9 @@ Bu laboratuvar çalışmaları ile öğrenciler:
 - ✅ Değişkenler ve veri tipleri ile çalışır
 - ✅ Koşullu ifadeler ve döngüler kullanır
 - ✅ Kullanıcı etkileşimi ve popup kutaları oluşturur
+- ✅ HTML form elemanları ile JavaScript etkileşimi kurar
+- ✅ Event handling ve DOM manipülasyonu yapar
+- ✅ Form doğrulama teknikleri uygular
 
 ---
 

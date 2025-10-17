@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 3 - Football Teams</title>
+</head>
+<body>
+    <h2>Step 3 - Use of functions in form elements</h2>
+    <p>We can manipulate the styles of form objects with Javascript.</p>
+
+    <script>
+        function stil(a,b)
+        {
+            document.getElementById("text").style.color=a;
+            document.getElementById("text").style.backgroundColor=b;
+        }
+    </script>
+
+    <button id="b1" onclick="stil('yellow','red')">Galatasaray</button>
+    <button id="b2" onclick="stil('white','black')">Beşiktaş</button>
+    <button id="b3" onclick="stil('yellow','navy')">Fenerbahçe</button>
+
+    <p id="text">Please choose which team you are on.</p>
+
+</body>
+</html>

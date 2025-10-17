@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROCEDURE 2 - All Steps Combined</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .step-container {
+            border: 2px solid #333;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .step-title {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 6px 6px 0 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .demo-section {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .main-title {
+            text-align: center;
+            color: #333;
+            border-bottom: 3px solid #333;
+            padding-bottom: 10px;
+        }
+        .events-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .events-table th, .events-table td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+        .events-table th {
+            background-color: #90EE90;
+        }
+        #text3 {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #333;
+            background-color: #f0f0f0;
+        }
+        .team-buttons {
+            margin: 10px 0;
+        }
+        .team-buttons button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-title">PROCEDURE 2 – JavaScript Events</h1>
+    <p><strong>Description:</strong> HTML documents contain many objects. These objects are subject to certain effects. For example, a button is for clicking, and for an object being clicked is an event. JavaScript can operate on HTML objects as a result of the event.</p>
+    
+    <p><strong>HTML events are actions taken by the browser or user:</strong></p>
+    <ul>
+        <li>Loading the web page</li>
+        <li>Change of data entry field</li>
+        <li>Clicking the button</li>
+    </ul>
+
+    <!-- STEP 1 -->
+    <div class="step-container">
+        <div class="step-title">Step 1 – Clicking the Button</div>
+        <p><strong>Description:</strong> A basic button without JavaScript connection.</p>
+        
+        <div class="demo-section">
+            <button>Click Here</button>
+            <p><strong>Note:</strong> Clicking the button above is an event. However, it does not respond because it is not connected with JavaScript.</p>
+        </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-container">
+        <div class="step-title">Step 2 – Button with JavaScript Event</div>
+        <p><strong>Description:</strong> Now when the button is clicked, "Hello!" Let's do it with JavaScript. HTML allows us to write JavaScript code to the event property for each event. In the example below, the HTML onclick attribute has been added for the button click event.</p>
+        
+        <div class="demo-section">
+            <button onclick="alert('HELLO!')">Click Here</button>
+            <p><strong>Note:</strong> Here, thanks to the HTML feature that we can use as onclick="", we made the codes we wrote in JavaScript run when the button is clicked.</p>
+            
+            <h3>HTML Events Table:</h3>
+            <table class="events-table">
+                <tr>
+                    <th>Event</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>onchange</td>
+                    <td>Raised when the HTML element is changed.</td>
+                </tr>
+                <tr>
+                    <td>onclick</td>
+                    <td>Raised when the user clicks on the HTML object.</td>
+                </tr>
+                <tr>
+                    <td>onmouseover</td>
+                    <td>Raised when the user hovers over the HTML object.</td>
+                </tr>
+                <tr>
+                    <td>onmouseout</td>
+                    <td>Raised when the user leaves the HTML object.</td>
+                </tr>
+                <tr>
+                    <td>onkeydown</td>
+                    <td>It is triggered when the user presses the keyboard key.</td>
+                </tr>
+                <tr>
+                    <td>onload</td>
+                    <td>It is triggered when the browser has finished loading the page.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-container">
+        <div class="step-title">Step 3 – Use of functions in form elements</div>
+        <p><strong>Description:</strong> We can manipulate the styles of form objects with Javascript.</p>
+        
+        <div class="demo-section">
+            <div class="team-buttons">
+                <button onclick="stil('yellow','red')">Galatasaray</button>
+                <button onclick="stil('white','black')">Beşiktaş</button>
+                <button onclick="stil('yellow','navy')">Fenerbahçe</button>
+            </div>
+
+            <p id="text3">Please choose which team you are on.</p>
+        </div>
+    </div>
+
+    <script>
+        // Step 3 - Function to change text style based on team selection
+        function stil(a,b) {
+            document.getElementById("text3").style.color = a;
+            document.getElementById("text3").style.backgroundColor = b;
+        }
+    </script>
+
+    <div style="text-align: center; margin-top: 30px; padding: 20px; background-color: #e8f4f8; border-radius: 8px;">
+        <h3>🎉 PROCEDURE 2 Complete!</h3>
+        <p>All JavaScript events and interactions have been demonstrated above.</p>
+        <p><strong>Try the buttons above to see the events in action!</strong></p>
+    </div>
+</body>
+</html>
