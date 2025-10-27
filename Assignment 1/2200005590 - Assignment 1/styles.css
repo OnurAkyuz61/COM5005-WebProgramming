@@ -1,0 +1,632 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with default font */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+/* Main container for the entire webpage */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Header section styling with background image */
+.header {
+    background: url('assets/images/header_background.jpg') center/cover;
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    min-height: 160px;
+    overflow: hidden;
+}
+
+/* Language flags container */
+.language-flags {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    display: flex;
+    gap: 10px;
+}
+
+/* Flag icons styling */
+.flag-icon {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Flag hover effect */
+.flag-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Header right side image */
+.header::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background: url('assets/images/header_rightside.jpg') right center/cover;
+    z-index: 1;
+}
+
+/* Header content container */
+.header-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Profile circle styling - centered below text */
+.profile-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #007bff;
+    background: white;
+    margin: 20px auto -30px auto;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 0 0 2px white, 0 0 0 6px #007bff;
+}
+
+/* Profile image */
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Name styling with Courier New font, 70px */
+.name {
+    font-family: 'Courier New', monospace;
+    font-size: 70px;
+    margin: 0;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Title styling with Tahoma font, 30px */
+.title {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 30px;
+    margin: 10px 0 0 0;
+    color: #f39c12;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Main content area with three-column layout */
+.main-content {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding-top: 0px;
+}
+
+/* Left sidebar navigation with specified background color */
+.left-sidebar {
+    width: 150px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    height: fit-content;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0;
+    margin: 8px;
+    border-radius: 15px;
+    border: 3px solid #00a86b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 280px;
+    left: 8px;
+    z-index: 100;
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation menu items */
+.nav-menu li {
+    margin: 0;
+}
+
+/* Navigation links with Georgia font, 16px and icons */
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    transition: all 0.3s;
+    gap: 8px;
+    border-radius: 8px;
+    margin: 2px 0;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Navigation icon styling */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+/* Social media icon backgrounds */
+.facebook-icon {
+    background-image: url('assets/images/facebook.png');
+}
+
+.instagram-icon {
+    background-image: url('assets/images/insta.png');
+}
+
+.twitter-icon {
+    background-image: url('assets/images/twiter.png');
+}
+
+.linkedin-icon {
+    background-image: url('assets/images/in.png');
+}
+
+.google-icon {
+    background-image: url('assets/images/g.png');
+}
+
+.youtube-icon {
+    background-image: url('assets/images/youtube.png');
+}
+
+/* Navigation link hover effect */
+.nav-link:hover {
+    background-color: #f0f0f0;
+    border-color: #007bff;
+    transform: translateX(2px);
+}
+
+/* Center content area styling */
+.center-content {
+    flex: 1;
+    padding: 15px;
+    background-color: #fff;
+    border: 3px dashed #007bff;
+    margin: 8px;
+    margin-left: 180px;
+    border-radius: 8px;
+    max-width: calc(100vw - 560px);
+}
+
+/* Welcome section styling */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px 0;
+}
+
+/* Welcome title with Arial font, 25px */
+.welcome-title {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: normal;
+    animation: blink 3s infinite;
+}
+
+/* Blinking animation for welcome title */
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Section styling for different content areas */
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 0;
+}
+
+/* About Me section with specified background color */
+.about-section {
+    background-color: rgba(236, 176, 176, 1);
+}
+
+/* Education section with specified background color */
+.education-section {
+    background-color: rgba(182, 237, 174, 1);
+}
+
+/* Experience section with specified background color */
+.experience-section {
+    background-color: rgba(224, 228, 87, 1);
+}
+
+/* Skills section with specified background color */
+.skills-section {
+    background-color: rgba(167, 146, 202, 1);
+}
+
+/* Hobbies section with specified background color */
+.hobbies-section {
+    background-color: rgba(184, 131, 129, 1);
+}
+
+/* Section titles with Arial font, 20px */
+.section-title {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Section text with Arial font, 18px */
+.section-text {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+/* Section lists with Arial font, 18px */
+.section-list {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    padding-left: 20px;
+}
+
+/* Skills icons container */
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Individual skill icon styling */
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Right sidebar styling */
+.right-sidebar {
+    width: 340px;
+    padding: 12px;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    flex-shrink: 0;
+    margin: 8px;
+}
+
+/* Quick ID section with specified background color */
+.quick-id {
+    background-color: rgb(0, 71, 150);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    border: 3px solid #00a86b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Quick ID title with Garamond font, 16pt */
+.quick-id-title {
+    font-family: 'Garamond', serif;
+    font-size: 16pt;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+/* Quick ID content with Garamond font, 14pt */
+.quick-id-content {
+    font-family: 'Garamond', serif;
+    font-size: 14pt;
+    line-height: 1.5;
+}
+
+/* Quick ID content paragraphs */
+.quick-id-content p {
+    margin-bottom: 8px;
+}
+
+/* Contact Me section with specified background color */
+.contact-me {
+    background-color: rgb(173, 216, 230);
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid #00a86b;
+    margin-top: 0px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact Me title with Verdana font, 14pt */
+.contact-title {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 3px solid #d32f2f;
+    padding-bottom: 8px;
+}
+
+/* Contact form styling */
+.contact-form {
+    font-family: 'Verdana', sans-serif;
+    font-size: 12pt;
+}
+
+/* Form row for side-by-side inputs */
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Form group styling */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Full width form group */
+.form-group.full-width {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Form labels */
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Verdana', sans-serif;
+    font-size: 12pt;
+    display: block;
+}
+
+/* Form inputs and selects */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 8px;
+    border: 2px solid #999;
+    border-radius: 8px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 12pt;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Special styling for date and time inputs */
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Date input specific styling */
+.date-input {
+    position: relative;
+}
+
+/* Time input specific styling */
+.time-input {
+    position: relative;
+}
+
+/* Textarea specific styling */
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px 30px;
+    border: 2px solid #999;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Verdana', sans-serif;
+    font-size: 12pt;
+    width: auto;
+    margin: 15px auto 0 auto;
+    display: block;
+    transition: all 0.3s;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+    background-color: #d0d0d0;
+    border-color: #777;
+}
+
+/* Thank you message styling */
+.thank-you-message {
+    background-color: rgb(173, 216, 230);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Thank you content styling */
+.thank-you-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Thank you content headings */
+.thank-you-content h3 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14pt;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Thank you content paragraphs */
+.thank-you-content p {
+    font-family: 'Verdana', sans-serif;
+    font-size: 12pt;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Thank you content lists */
+.thank-you-content ul {
+    text-align: left;
+    margin: 10px 0;
+}
+
+/* Thank you content links */
+.thank-you-content a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Footer styling with black background */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Footer content container */
+.footer-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer text with Copperplate font, 20px */
+.footer-text {
+    font-family: 'Copperplate', fantasy;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+    .left-sidebar {
+        width: 140px;
+        font-size: 14px;
+    }
+    
+    .right-sidebar {
+        width: 320px;
+    }
+    
+    .center-content {
+        margin-left: 160px;
+        max-width: calc(100vw - 520px);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .left-sidebar {
+        position: relative;
+        width: 100%;
+        margin: 5px;
+        left: 0;
+        top: 0 !important;
+    }
+    
+    .right-sidebar {
+        width: 100%;
+        margin: 5px;
+    }
+    
+    .center-content {
+        max-width: none;
+        margin: 5px;
+        margin-left: 5px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 50px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .skills-icons {
+        justify-content: center;
+    }
+}

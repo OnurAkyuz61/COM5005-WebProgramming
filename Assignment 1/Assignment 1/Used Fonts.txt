@@ -1,0 +1,20 @@
+Name in header: Courier New , 70px
+Title in header: Tohama , 30px
+Navigation menu on the left: Georgia , 16px
+QUICK ID title on the right: Garamond , 16 pt
+QUICK ID information on the right: Garamond , 14 pt
+CONTACT ME title on the right: Verdana , 14 pt
+CONTACT ME information on the right: Verdana , 12 pt
+Welcome To My Webpage in the center: Arial, 25px
+ABOUT ME title in the center: Arial, 20px
+ABOUT ME paragraph in the center: Arial, 18px
+EDUCATION title in the center: Arial, 20px
+EDUCATION list in the center: Arial, 18px
+EXPERIENCE title in the center: Arial, 20px
+EXPERIENCE list in the center: Arial, 18px
+SKILLS title in the center: Arial, 20px
+HOBBIES AND INTERESTS title in the center: Arial, 20px
+HOBBIES AND INTERESTS list in the center: Arial, 18px
+Texts in footer: Copperplate , 20px
+
+

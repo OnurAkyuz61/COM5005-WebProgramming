@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisam Elmasry - Personal Webpage</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main container for the entire webpage -->
+    <div class="container">
+        <!-- Header section with name and title -->
+        <header class="header">
+            <!-- Language flags -->
+            <div class="language-flags">
+                <img src="assets/images/Eng.png" alt="English" class="flag-icon">
+                <img src="assets/images/Tur.png" alt="Türkçe" class="flag-icon">
+            </div>
+            <div class="header-content">
+                <h1 class="name">Wisam Elmasry</h1>
+                <h2 class="title">Assistant Professor at IKU</h2>
+                <!-- Profile image circle centered below -->
+                <div class="profile-circle">
+                    <img src="assets/images/header_rightside.jpg" alt="Profile" class="profile-img">
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content area with three columns -->
+        <div class="main-content">
+            <!-- Left navigation sidebar -->
+            <nav class="left-sidebar">
+                <ul class="nav-menu">
+                    <!-- Social media navigation links with icons -->
+                    <li><a href="#" class="nav-link facebook"><span class="nav-icon facebook-icon"></span> Facebook</a></li>
+                    <li><a href="#" class="nav-link instagram"><span class="nav-icon instagram-icon"></span> Instagram</a></li>
+                    <li><a href="#" class="nav-link twitter"><span class="nav-icon twitter-icon"></span> Twitter</a></li>
+                    <li><a href="#" class="nav-link linkedin"><span class="nav-icon linkedin-icon"></span> LinkedIn</a></li>
+                    <li><a href="#" class="nav-link google"><span class="nav-icon google-icon"></span> Google+</a></li>
+                    <li><a href="#" class="nav-link youtube"><span class="nav-icon youtube-icon"></span> Youtube</a></li>
+                </ul>
+            </nav>
+
+            <!-- Center content area -->
+            <main class="center-content">
+                <!-- Welcome message -->
+                <div class="welcome-section">
+                    <h2 class="welcome-title">Welcome To My Webpage</h2>
+                </div>
+
+                <!-- About Me section -->
+                <section class="about-section">
+                    <h3 class="section-title">ABOUT ME</h3>
+                    <p class="section-text">
+                        I am a computer engineer which is a broad word under which there are many job roles. As a computer engineer I would be responsible for developing, designing, testing and implementing various computer based software and hardware, which includes certain components found inside the computer equipment. Furthermore, I can care for the devices within the computer and the software which power these machines. Finally, I can design the network and assure its security by integrating various software programs and hardware. Computer engineers are in heavy demand all through the business sectors in the world.
+                    </p>
+                </section>
+
+                <!-- Education section -->
+                <section class="education-section">
+                    <h3 class="section-title">EDUCATION</h3>
+                    <ol class="section-list">
+                        <li>Computer Engineering (Postdoctoral)</li>
+                        <li>Computer Engineering (Ph.D.)</li>
+                        <li>Computer Engineering (Master)</li>
+                        <li>Computer Engineering (Bachelor)</li>
+                    </ol>
+                </section>
+
+                <!-- Experience section -->
+                <section class="experience-section">
+                    <h3 class="section-title">EXPERIENCE</h3>
+                    <ul class="section-list">
+                        <li>Assistant Professor Dr.</li>
+                        <li>Research Assistant</li>
+                        <li>Computer Engineer</li>
+                    </ul>
+                </section>
+
+                <!-- Skills section with technology icons -->
+                <section class="skills-section">
+                    <h3 class="section-title">SKILLS</h3>
+                    <div class="skills-icons">
+                        <!-- Technology skill icons from assets -->
+                        <img src="assets/images/skills1.jpg" alt="HTML5" class="skill-icon">
+                        <img src="assets/images/skills2.jpg" alt="CSS3" class="skill-icon">
+                        <img src="assets/images/skills3.jpg" alt="JavaScript" class="skill-icon">
+                        <img src="assets/images/skills4.jpg" alt="ASP.NET" class="skill-icon">
+                        <img src="assets/images/skills5.png" alt="Java" class="skill-icon">
+                        <img src="assets/images/skills6.png" alt="Visual Studio" class="skill-icon">
+                        <img src="assets/images/skills7.png" alt="Python" class="skill-icon">
+                    </div>
+                </section>
+
+                <!-- Hobbies and Interests section -->
+                <section class="hobbies-section">
+                    <h3 class="section-title">HOBBIES AND INTERESTS</h3>
+                    <ul class="section-list">
+                        <li>Sports</li>
+                        <li>Traveling</li>
+                        <li>Reading</li>
+                    </ul>
+                </section>
+            </main>
+
+            <!-- Right sidebar with Quick ID and Contact form -->
+            <aside class="right-sidebar">
+                <!-- Quick ID information card -->
+                <div class="quick-id">
+                    <h3 class="quick-id-title">QUICK ID</h3>
+                    <div class="quick-id-content">
+                        <p><strong>Phone:</strong> 123-456-7890</p>
+                        <p><strong>Email:</strong> w.elmasry@iku.edu.tr</p>
+                        <p><strong>Website:</strong> www.iku.edu.tr</p>
+                        <p><strong>Address:</strong> Ataköy 7-8-9-10, E5 Karayolu<br>
+                        Üzeri Ataköy Yerleşkesi,<br>
+                        34158 Bakırköy/İstanbul</p>
+                    </div>
+                </div>
+
+                <!-- Contact Me form -->
+                <div class="contact-me">
+                    <h3 class="contact-title">CONTACT ME</h3>
+                    <form id="contactForm" class="contact-form">
+                        <!-- First and Last name fields -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <!-- Email and Tel fields -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">Tel</label>
+                                <input type="tel" id="tel" name="tel">
+                            </div>
+                        </div>
+
+                        <!-- Date and Time fields -->
+                        <div class="form-row">
+                            <div class="form-group date-input">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" name="date">
+                            </div>
+                            <div class="form-group time-input">
+                                <label for="time">Time</label>
+                                <input type="time" id="time" name="time">
+                            </div>
+                        </div>
+
+                        <!-- Subject field -->
+                        <div class="form-group full-width">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <!-- Message field -->
+                        <div class="form-group full-width">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="submit-btn">Send</button>
+                    </form>
+                </div>
+
+                <!-- Thank you message (initially hidden) -->
+                <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+                    <div class="thank-you-content">
+                        <h3>Thank you...</h3>
+                        <p>Your message has been sent!</p>
+                        <p>You sent message <span id="messageCount">1</span> time:</p>
+                        <ul>
+                            <li id="submissionTime"></li>
+                        </ul>
+                        <p>To send another message, <a href="#" id="sendAnotherLink">click here</a></p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer section -->
+        <footer class="footer">
+            <div class="footer-content">
+                <!-- Last update and copyright information -->
+                <p class="footer-text">Last Update: 01/12/2023 - 1:00 GMT</p>
+                <p class="footer-text">Copyright © 2023</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

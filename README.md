@@ -195,6 +195,8 @@ Bu laboratuvar 3 farklı prosedürden oluşmaktadır:
    cd COM5005-WebProgramming/Lab\ 4/
    # veya
    cd COM5005-WebProgramming/Lab\ 5/
+   # veya Assignment için
+   cd COM5005-WebProgramming/Assignment\ 1/2200005590\ -\ Assignment\ 1/
    ```
 
 3. **🌐 HTML dosyalarını web tarayıcısında açın:**
@@ -227,6 +229,64 @@ Bu laboratuvar çalışmaları ile öğrenciler:
 - ✅ HTML form elemanları ile JavaScript etkileşimi kurar
 - ✅ Event handling ve DOM manipülasyonu yapar
 - ✅ Form doğrulama teknikleri uygular
+- ✅ Kişisel portfolyo web sayfası tasarlar ve geliştirir
+- ✅ Responsive tasarım prensiplerini uygular
+- ✅ CSS Grid ve Flexbox ile modern layout oluşturur
+- ✅ Renk teorisi ve tipografi bilgisini web tasarımında kullanır
+
+### 📝 Assignment 1 - Kişisel Web Sayfası Projesi
+Bu ödev, öğrencilerin HTML, CSS ve JavaScript kullanarak kişisel bir web sayfası oluşturmalarını amaçlamaktadır.
+
+#### 📁 Proje Yapısı
+- **📁 Klasör:** `Assignment 1/2200005590 - Assignment 1/`
+- **📄 Ana Dosyalar:**
+  - `index.html` - Ana HTML sayfası
+  - `styles.css` - CSS stil dosyası
+  - `script.js` - JavaScript işlevsellik dosyası
+  - `assets/` - Görsel ve medya dosyaları klasörü
+
+#### 📋 Proje Detayları
+- **📄 Ek Dosyalar:**
+  - `ABOUT ME paragraph.txt` - Hakkımda bölümü metni
+  - `Background Colors.txt` - Kullanılan renk kodları
+  - `Used Fonts.txt` - Kullanılan font bilgileri
+  - `Assignment 1.flv` - Proje tanıtım videosu
+
+#### 🎨 Tasarım Özellikleri
+- **🎯 Layout:** Sol navigasyon menüsü, sağ bilgi paneli, merkez içerik alanı
+- **🌈 Renk Şeması:**
+  - Navigasyon menüsü: `#f1f1f1`
+  - QUICK ID bölümü: `rgb(0, 71, 150)`
+  - CONTACT ME bölümü: `rgb(173, 216, 230)`
+  - İçerik bölümleri: Çeşitli RGBA renkleri
+  - Footer: Siyah
+
+- **🔤 Font Kullanımı:**
+  - Başlık: Courier New (70px)
+  - Alt başlık: Tahoma (30px)
+  - Navigasyon: Georgia (16px)
+  - İçerik: Arial (18-25px arası)
+  - Footer: Copperplate (20px)
+
+#### 📑 Sayfa Bölümleri
+- **🏠 Header:** İsim ve unvan
+- **🧭 Navigation:** Sol menü
+- **👤 Quick ID:** Kişisel bilgiler
+- **📞 Contact Me:** İletişim bilgileri
+- **ℹ️ About Me:** Kişisel tanıtım
+- **🎓 Education:** Eğitim geçmişi
+- **💼 Experience:** İş deneyimi
+- **🛠️ Skills:** Beceriler
+- **🎯 Hobbies & Interests:** Hobiler ve ilgi alanları
+- **📋 Footer:** Alt bilgi
+
+#### 🎯 Öğrenilen Konular
+- Responsive web tasarımı
+- CSS Grid ve Flexbox kullanımı
+- JavaScript ile dinamik içerik
+- Kişisel portfolyo sayfası oluşturma
+- Renk teorisi ve tipografi
+- Web sayfası düzeni ve kullanıcı deneyimi
 
 ---
 

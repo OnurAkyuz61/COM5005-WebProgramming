@@ -1,0 +1,9 @@
+Navigation menu on the left: #f1f1f1
+QUICK ID section on the right: rgb(0, 71, 150)
+CONTACT ME section on the right: rgb(173, 216, 230)
+ABOUT ME section on the middle: rgba(236, 176, 176)
+EDUCATION section on the middle: rgba(182, 237, 174)
+EXPERIENCE section on the middle: rgba(224, 228, 87)
+SKILLS section on the middle: rgba(167, 146, 202)
+HOBBIES AND INTERESTS section on the middle: rgba(184, 131, 129)
+Footer on the bottom: black
