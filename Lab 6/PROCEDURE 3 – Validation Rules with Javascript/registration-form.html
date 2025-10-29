@@ -1,0 +1,110 @@
+<html>
+<h1>REGISTRATION FORM</h1><br/>
+
+<div id="form">
+<form name="form1" id="form1" method="post" onsubmit="return validateForm()">
+	<table>
+	<tr>
+		<td>User Name:</td>
+		<td><input type="text" id="user1" name="userText" /></td>
+	</tr>
+	
+	<tr>
+		<td>Name:</td>
+		<td><input type="text" id="name1" name="nameText" /></td>
+	</tr>
+	
+	<tr>
+		<td>Gender:</td>
+		<td>
+			<input type="radio" id="radio1" name="gender" /> Male
+			<input type="radio" id="radio2" name="gender" /> Female <br/>
+		</td> 
+	</tr>
+	
+	<tr>
+		<td>E-Mail:</td>
+		<td><input type="text" id="email1" name="emailText" /></td>
+	</tr>
+	
+	<tr>
+		<td>Password:</td>
+		<td><input type="Password" id="pass1" name="passText" /></td>
+	</tr>
+	
+	<tr>
+		<td>Repeat Password:</td>
+		<td><input type="Password" id="pass2" name="passText2" /></td>
+	</tr>
+	
+	<tr>
+		<td>Hobby:</td>
+		<td>
+			<input type="checkbox" id="cb1" name="hobby" /> Swimming <br/>
+			<input type="checkbox" id="cb2" name="hobby" /> Running <br/>
+			<input type="checkbox" id="cb3" name="hobby" /> Trekking <br/>
+			<input type="checkbox" id="cb4" name="hobby" /> Reading <br/>
+		</td>
+	</tr>
+	
+	<tr>
+		<td> </td>
+		<td>
+			<input type="submit"  id="submitBtn" name="submit" value="Sign Up" />
+			<input type="reset"  id="resetBtn" name="reset" value="Reset" />
+		</td>
+	</tr>
+	</table>
+	
+</form>
+</div>
+
+<script type="text/javascript">
+	function validateForm() 
+	{
+		//Validation of username and name values.
+		var username = document.forms['form1'][0].value;
+		if (username==null ||username=="")
+		{
+			alert("The username field cannot be left blank.");
+			return false;
+		}
+		var name = document.forms['form1'][1].value;
+		if (name==null || name=="")
+		{
+			alert("The name field cannot be left blank.");
+			return false;
+		}
+		
+		//Validation of Email value.
+		var email = document.forms['form1'][4].value;
+		if (email==null ||email=="")
+		{
+			alert("The Email field cannot be left blank.");
+			return false;
+		}
+		
+		//Validation of Password1 and Password2 values.
+		var psw1 = document.forms['form1'][5].value;
+		var psw2 = document.forms['form1'][6].value;
+		if (psw1==null || psw1=="" || psw2==null || psw2=="")
+		{
+			alert("The password field cannot be left blank.");
+			return false;
+		}
+		if (psw1!=psw2)
+		{
+			alert("Enter the same password.");
+			return false;
+		}
+		else
+		{
+			alert("Form submission completed successfully.");
+			return true;
+		}
+	}
+</script>
+
+
+
+</html>
