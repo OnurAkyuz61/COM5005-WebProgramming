@@ -175,6 +175,68 @@ Bu laboratuvar 3 farklı prosedürden oluşmaktadır:
   - getElementById() ve element özellikleri
   - Alert, focus ve form kontrol yöntemleri
 
+### 🔬 Lab 6 - Advanced JavaScript Form Validation
+Bu laboratuvar JavaScript ile gelişmiş form doğrulama tekniklerini kapsamaktadır:
+
+#### ✅ Prosedür 3 - Validation Rules with Javascript (Gelişmiş)
+- **📁 Klasör:** `PROCEDURE 3 – Validation Rules with Javascript/`
+- **📄 Dosyalar:**
+  - `registration-form.html` - Kapsamlı kayıt formu ve doğrulama kuralları
+  - `Lab06_Registration Form.pdf` - Laboratuvar kılavuzu
+
+- **🎯 Öğrenilen Konular:**
+  - Gelişmiş form doğrulama teknikleri
+  - Kullanıcı adı ve isim alanı kontrolü
+  - E-posta formatı doğrulama
+  - Şifre eşleştirme kontrolü
+  - Radio button ve checkbox doğrulama
+  - Form gönderimi öncesi kapsamlı kontroller
+  - JavaScript ile dinamik hata mesajları
+  - document.forms[] array kullanımı
+  - Boş alan kontrolü ve kullanıcı uyarıları
+
+### 🔬 Lab 7 - ASP.NET MVC5 Web Application Development
+Bu laboratuvar ASP.NET MVC5 framework'ü ile web uygulaması geliştirmeyi kapsamaktadır:
+
+#### 🌐 FirstWebApp - ASP.NET MVC5 Projesi
+- **📁 Klasör:** `FirstWebApp/`
+- **📄 Ana Dosyalar:**
+  - `Global.asax` & `Global.asax.cs` - Uygulama başlatma ayarları
+  - `Web.config` - Uygulama konfigürasyonu
+  - `packages.config` - NuGet paket bağımlılıkları
+  - `Lab07_ASPNet_MVC5_Overview_LabManual.pdf` - Laboratuvar kılavuzu
+
+#### 🎛️ MVC Yapısı
+- **📁 Controllers/:**
+  - `HomeController.cs` - Ana controller (Index, About, Contact, SignIn action'ları)
+
+- **📁 Views/:**
+  - `Home/Index.cshtml` - Ana sayfa view'ı
+  - `Home/About.cshtml` - Hakkında sayfası
+  - `Home/Contact.cshtml` - İletişim sayfası
+  - `Home/SignIn.cshtml` - Giriş sayfası
+  - `Shared/` - Paylaşılan view bileşenleri
+  - `_ViewStart.cshtml` - View başlatma ayarları
+
+- **📁 App_Start/:**
+  - `BundleConfig.cs` - CSS/JS dosya paketleme ayarları
+  - `FilterConfig.cs` - Action filter konfigürasyonu
+  - `RouteConfig.cs` - URL routing ayarları
+
+- **📁 Content/:** - CSS ve stil dosyaları
+
+- **🎯 Öğrenilen Konular:**
+  - ASP.NET MVC5 framework mimarisi
+  - Model-View-Controller (MVC) tasarım deseni
+  - Controller ve Action method'ları
+  - Razor View Engine kullanımı
+  - ViewBag ile veri aktarımı
+  - URL Routing ve Route konfigürasyonu
+  - Bundle ve minification teknikleri
+  - Web.config konfigürasyon yönetimi
+  - NuGet paket yönetimi
+  - ASP.NET web uygulaması proje yapısı
+
 ---
 
 ## 🚀 Nasıl Kullanılır
@@ -195,6 +257,10 @@ Bu laboratuvar 3 farklı prosedürden oluşmaktadır:
    cd COM5005-WebProgramming/Lab\ 4/
    # veya
    cd COM5005-WebProgramming/Lab\ 5/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 6/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 7/
    # veya Assignment için
    cd COM5005-WebProgramming/Assignment\ 1/2200005590\ -\ Assignment\ 1/
    ```
@@ -233,6 +299,13 @@ Bu laboratuvar çalışmaları ile öğrenciler:
 - ✅ Responsive tasarım prensiplerini uygular
 - ✅ CSS Grid ve Flexbox ile modern layout oluşturur
 - ✅ Renk teorisi ve tipografi bilgisini web tasarımında kullanır
+- ✅ Gelişmiş JavaScript form doğrulama teknikleri uygular
+- ✅ Kapsamlı kullanıcı girdi kontrolü yapar
+- ✅ ASP.NET MVC5 framework mimarisini öğrenir
+- ✅ Model-View-Controller tasarım desenini uygular
+- ✅ Razor View Engine ile dinamik web sayfaları oluşturur
+- ✅ Controller ve Action method'ları geliştirir
+- ✅ Web uygulaması konfigürasyonu ve routing yönetir
 
 ### 📝 Assignment 1 - Kişisel Web Sayfası Projesi
 Bu ödev, öğrencilerin HTML, CSS ve JavaScript kullanarak kişisel bir web sayfası oluşturmalarını amaçlamaktadır.
