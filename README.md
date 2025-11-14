@@ -237,6 +237,51 @@ Bu laboratuvar ASP.NET MVC5 framework'ü ile web uygulaması geliştirmeyi kapsa
   - NuGet paket yönetimi
   - ASP.NET web uygulaması proje yapısı
 
+### 🔬 Lab 9 - Advanced Web Development Concepts
+Bu laboratuvar ileri düzey web geliştirme konularını kapsamaktadır:
+
+#### 🚀 Prosedür 1 - AJAX ve Asynchronous Programming
+- **📁 Klasör:** `PROCEDURE 1 - AJAX and Asynchronous Programming/`
+- **📄 Dosyalar:**
+  - `ajax_basics.html` - Temel AJAX kullanımı
+  - `fetch_api.html` - Modern Fetch API ile veri çekme
+  - `async_await.html` - Async/Await kullanımı
+  - `data.json` - Örnek JSON veri dosyası
+
+#### 🎨 Prosedür 2 - CSS3 Advanced Features
+- **📁 Klasör:** `PROCEDURE 2 - CSS3 Advanced Features/`
+- **📄 Dosyalar:**
+  - `animations.html` - CSS animasyonları ve transitions
+  - `flexbox_grid.html` - Modern layout teknikleri
+  - `responsive_design.html` - Responsive tasarım prensipleri
+  - `advanced_styles.css` - Gelişmiş CSS özellikleri
+
+#### 📱 Prosedür 3 - Mobile-First Design
+- **📁 Klasör:** `PROCEDURE 3 - Mobile-First Design/`
+- **📄 Dosyalar:**
+  - `mobile_layout.html` - Mobil öncelikli tasarım
+  - `media_queries.css` - Media query kullanımı
+  - `touch_events.js` - Dokunmatik olaylar
+
+#### 🔧 Prosedür 4 - Modern JavaScript (ES6+)
+- **📁 Klasör:** `PROCEDURE 4 - Modern JavaScript ES6+/`
+- **📄 Dosyalar:**
+  - `arrow_functions.html` - Arrow function kullanımı
+  - `destructuring.html` - Destructuring assignment
+  - `modules.html` - ES6 modül sistemi
+  - `classes.html` - ES6 class yapısı
+
+- **🎯 Öğrenilen Konular:**
+  - AJAX ve asenkron programlama teknikleri
+  - Fetch API ile modern veri çekme yöntemleri
+  - CSS3 animasyonları ve geçişler
+  - Flexbox ve Grid ile modern layout
+  - Responsive ve mobile-first tasarım
+  - ES6+ JavaScript özellikleri
+  - Arrow functions ve destructuring
+  - Modern modül sistemi kullanımı
+  - Asenkron JavaScript (async/await, promises)
+
 ---
 
 ## 🚀 Nasıl Kullanılır
@@ -261,6 +306,8 @@ Bu laboratuvar ASP.NET MVC5 framework'ü ile web uygulaması geliştirmeyi kapsa
    cd COM5005-WebProgramming/Lab\ 6/
    # veya
    cd COM5005-WebProgramming/Lab\ 7/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 9/
    # veya Assignment için
    cd COM5005-WebProgramming/Assignment\ 1/2200005590\ -\ Assignment\ 1/
    ```
@@ -306,6 +353,13 @@ Bu laboratuvar çalışmaları ile öğrenciler:
 - ✅ Razor View Engine ile dinamik web sayfaları oluşturur
 - ✅ Controller ve Action method'ları geliştirir
 - ✅ Web uygulaması konfigürasyonu ve routing yönetir
+- ✅ AJAX ve asenkron programlama teknikleri kullanır
+- ✅ Modern JavaScript (ES6+) özelliklerini uygular
+- ✅ CSS3 animasyonları ve geçişler oluşturur
+- ✅ Mobile-first responsive tasarım yapar
+- ✅ Fetch API ile veri çekme işlemleri gerçekleştirir
+- ✅ Arrow functions ve destructuring kullanır
+- ✅ Async/await ile asenkron kod yazar
 
 ### 📝 Assignment 1 - Kişisel Web Sayfası Projesi
 Bu ödev, öğrencilerin HTML, CSS ve JavaScript kullanarak kişisel bir web sayfası oluşturmalarını amaçlamaktadır.
