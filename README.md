@@ -282,6 +282,33 @@ Bu laboratuvar ileri düzey web geliştirme konularını kapsamaktadır:
   - Modern modül sistemi kullanımı
   - Asenkron JavaScript (async/await, promises)
 
+### 🔬 Lab 10 - ASP.NET Core MVC View & Model
+Bu laboratuvar ASP.NET Core MVC'de View ve Model yapılarının kullanımını kapsamaktadır:
+
+#### 🎯 Prosedür 1 - Razor View Engine
+- **📁 Klasör:** `PROCEDURE 1 – @Razor View Engine@/RazorViewEngineApp/`
+- **📄 Dosyalar:**
+  - `HomeController.cs` - Users action method'u içeren controller
+  - `Users.cshtml` - Razor syntax örnekleri içeren view
+  - `Program.cs` - ASP.NET Core MVC konfigürasyonu
+
+#### 🎵 Prosedür 2 - MusicStore Project
+- **📁 Klasör:** `PROCEDURE 2 – Creating the MusicStore Project and Preparing Models/MusicStoreApp/`
+- **📄 Dosyalar:**
+  - `Album.cs` - Albüm entity modeli
+  - `MusicStoreDB.cs` - Entity Framework DbContext
+  - `StoreManagerController.cs` - CRUD işlemleri için controller
+  - `Views/StoreManager/` - Index, Create, Edit, Details, Delete view'ları
+
+- **🎯 Öğrenilen Konular:**
+  - Razor View Engine syntax kullanımı
+  - ViewBag ile veri aktarımı
+  - Entity Framework Core Code First yaklaşımı
+  - CRUD operations (Create, Read, Update, Delete)
+  - ASP.NET Core MVC scaffolding
+  - SQLite database entegrasyonu
+  - Model-View-Controller mimarisi
+
 ---
 
 ## 🚀 Nasıl Kullanılır
@@ -308,8 +335,12 @@ Bu laboratuvar ileri düzey web geliştirme konularını kapsamaktadır:
    cd COM5005-WebProgramming/Lab\ 7/
    # veya
    cd COM5005-WebProgramming/Lab\ 9/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 10/
    # veya Assignment için
    cd COM5005-WebProgramming/Assignment\ 1/2200005590\ -\ Assignment\ 1/
+   # veya
+   cd COM5005-WebProgramming/Assignment\ 2/
    ```
 
 3. **🌐 HTML dosyalarını web tarayıcısında açın:**
@@ -360,6 +391,21 @@ Bu laboratuvar çalışmaları ile öğrenciler:
 - ✅ Fetch API ile veri çekme işlemleri gerçekleştirir
 - ✅ Arrow functions ve destructuring kullanır
 - ✅ Async/await ile asenkron kod yazar
+- ✅ Full-stack web uygulaması geliştirir (Frontend + Backend)
+- ✅ Entity Framework Code First yaklaşımını uygular
+- ✅ CRUD işlemleri ile veri yönetimi yapar
+- ✅ Bootstrap framework ile responsive tasarım oluşturur
+- ✅ jQuery ile dinamik kullanıcı arayüzü geliştirir
+- ✅ Data Annotations ile model validasyonu uygular
+- ✅ Enum yapıları ile veri modelleme yapar
+- ✅ Veritabanı başlangıç verisi (Database Seeding) oluşturur
+- ✅ MVC mimarisi ile büyük ölçekli proje geliştirir
+- ✅ ASP.NET Core MVC ile modern web uygulaması geliştirir
+- ✅ Razor View Engine syntax ve kullanımını öğrenir
+- ✅ Entity Framework Core ile veritabanı işlemleri yapar
+- ✅ Code First Migration ile veritabanı şema yönetimi gerçekleştirir
+- ✅ MVC Scaffolding ile otomatik kod üretimi kullanır
+- ✅ SQLite ile hafif veritabanı çözümleri uygular
 
 ### 📝 Assignment 1 - Kişisel Web Sayfası Projesi
 Bu ödev, öğrencilerin HTML, CSS ve JavaScript kullanarak kişisel bir web sayfası oluşturmalarını amaçlamaktadır.
@@ -414,6 +460,100 @@ Bu ödev, öğrencilerin HTML, CSS ve JavaScript kullanarak kişisel bir web say
 - Kişisel portfolyo sayfası oluşturma
 - Renk teorisi ve tipografi
 - Web sayfası düzeni ve kullanıcı deneyimi
+
+### 📝 Assignment 2 - Araç Kiralama Sistemi (IKU-CAR)
+Bu ödev, öğrencilerin hem frontend (HTML/CSS/JS) hem de backend (ASP.NET MVC) teknolojilerini kullanarak kapsamlı bir araç kiralama sistemi geliştirmelerini amaçlamaktadır.
+
+#### 📁 Proje Yapısı
+- **📁 Ana Klasör:** `Assignment 2/`
+- **📄 Medya Dosyaları:**
+  - `Assignment 2.flv` - Proje tanıtım videosu
+  - `Car Data.png` - Araç veri yapısı şeması
+  - `Car Model.png` - Araç model diyagramı
+  - `Car_Images/` - Araç görselleri klasörü
+
+#### 🌐 Frontend Projesi - Rento
+- **📁 Klasör:** `HTML CSS JS/Rento/`
+- **📄 Ana Dosyalar:**
+  - `index.html` - Ana HTML sayfası (9404 bytes)
+  - `css/` - Bootstrap ve özel stil dosyaları (7 dosya)
+  - `js/` - JavaScript kütüphaneleri ve özel scriptler (3 dosya)
+  - `images/` - Web sitesi görselleri
+
+#### 🎨 Frontend Özellikleri
+- **🚗 Tema:** Araç kiralama web sitesi "IKU-CAR"
+- **📱 Responsive:** Bootstrap framework kullanımı
+- **🎭 Kütüphaneler:**
+  - Bootstrap 4.x
+  - jQuery 3.x
+  - Font Awesome icons
+  - Fancybox lightbox
+  - Custom scrollbar
+
+#### 🏗️ Backend Projesi - IKU-CAR-MVC
+- **📁 Klasör:** `IKU-CAR-MVC/`
+- **📄 Proje Dosyaları:**
+  - `IKU-CAR-MVC.sln` - Visual Studio solution dosyası
+  - `IKU-CAR-MVC.csproj` - Proje konfigürasyon dosyası
+  - `Global.asax` & `Global.asax.cs` - Uygulama başlatma
+  - `Web.config` - Web uygulaması konfigürasyonu
+  - `packages.config` - NuGet paket bağımlılıkları
+
+#### 🎛️ MVC Mimarisi
+- **📁 Models/:**
+  - `Car.cs` - Araç entity modeli (CarId, Make, Model, Year, Price, Image, IsAvailable, Description, CarType)
+  - `CarRentalContext.cs` - Entity Framework DbContext
+  - `CarRentalInitializer.cs` - Veritabanı başlangıç verisi
+  - `CarViewModel.cs` - View için özel model
+
+- **📁 Controllers/:**
+  - `HomeController.cs` - Ana sayfa controller (Index, About, Contact, SearchResults)
+  - `CarsController.cs` - Araç yönetimi controller (CRUD işlemleri)
+
+- **📁 Views/:**
+  - `Home/` - Ana sayfa view'ları (Index, About, Contact, SearchResults)
+  - `Cars/` - Araç yönetimi view'ları (Index, Create, Edit, Details, Delete)
+  - `Shared/` - Paylaşılan layout ve partial view'lar
+  - `_ViewStart.cshtml` - View başlatma ayarları
+
+- **📁 App_Start/:**
+  - Bundle, Filter ve Route konfigürasyonları
+
+#### 🚗 Araç Modeli Özellikleri
+- **🔑 CarId:** Benzersiz araç kimliği
+- **🏭 Make:** Araç markası (50 karakter)
+- **🚙 Model:** Araç modeli (50 karakter)
+- **📅 Year:** Üretim yılı (1900-2030 arası)
+- **💰 Price:** Günlük kiralama ücreti (decimal)
+- **🖼️ Image:** Araç görseli URL'si
+- **✅ IsAvailable:** Müsaitlik durumu
+- **📝 Description:** Araç açıklaması
+- **🏷️ CarType:** Araç tipi (Economy, Compact, Midsize, Fullsize, Premium, Luxury, SUV, Convertible)
+
+#### 🎯 Öğrenilen Konular
+- **Frontend Geliştirme:**
+  - Modern responsive web tasarımı
+  - Bootstrap framework kullanımı
+  - jQuery ile DOM manipülasyonu
+  - CSS3 animasyonları ve geçişler
+  - Font Awesome icon entegrasyonu
+  - Lightbox ve scrollbar kütüphaneleri
+
+- **Backend Geliştirme:**
+  - ASP.NET MVC 5 framework mimarisi
+  - Entity Framework Code First yaklaşımı
+  - Model-View-Controller tasarım deseni
+  - CRUD (Create, Read, Update, Delete) işlemleri
+  - Data Annotations ile model validasyonu
+  - Razor View Engine kullanımı
+  - Veritabanı başlangıç verisi (Database Seeding)
+  - Enum kullanımı ve veri modelleme
+
+- **Full-Stack Entegrasyon:**
+  - Frontend ve backend arasında veri akışı
+  - Web API ve MVC controller yapısı
+  - Veritabanı tasarımı ve ilişkileri
+  - Kullanıcı arayüzü ve veri yönetimi entegrasyonu
 
 ---
 

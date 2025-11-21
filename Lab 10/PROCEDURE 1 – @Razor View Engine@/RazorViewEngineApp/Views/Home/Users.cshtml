@@ -1,0 +1,44 @@
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users Information</h2>
+
+@{
+    string name = "Merve";
+    string surName = "Gun";
+    string eMail = "m.gun@iku.edu.tr";
+    
+    string name1 = "Merve";
+    string surName1 = "Gun";
+    string eMail1 = "m.gun@iku.edu.tr";
+    
+    string[] Users = new string[] { "Merve Gun", "Wisam Elmasry", "Ali Can" };
+}
+
+<b>Name::</b> @name
+<br />
+<b>Surname::</b> @surName
+<br />
+<b>E-mail Address::</b> @eMail
+<br />
+
+@(string.Format("Name:{0} - Surname:{1} - E-mail Address:{2}", name1, surName1, eMail1))
+<br />
+@* Alternative Way of Use *@
+@("Name:" + name1 + " - " + "Surname:" + surName1 + " - " + " E-mail Address:" + eMail1)
+
+<h2>USERS</h2>
+<ul>
+@foreach (string user in Users)
+{
+    if (user == "Ali Can")
+    {
+        <li><b>@user</b></li>
+    }
+    else
+    {
+        <li>@user</li>
+    }
+}
+</ul>

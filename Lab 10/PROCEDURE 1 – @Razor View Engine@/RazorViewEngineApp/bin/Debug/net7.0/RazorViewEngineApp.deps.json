@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "RazorViewEngineApp/1.0.0": {
+        "runtime": {
+          "RazorViewEngineApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RazorViewEngineApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
