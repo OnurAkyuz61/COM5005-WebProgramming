@@ -341,19 +341,44 @@ Bu laboratuvar ASP.NET Core MVC'de View ve Model yapılarının kullanımını k
    cd COM5005-WebProgramming/Assignment\ 1/2200005590\ -\ Assignment\ 1/
    # veya
    cd COM5005-WebProgramming/Assignment\ 2/
+   # Frontend için
+   cd COM5005-WebProgramming/Assignment\ 2/HTML\ CSS\ JS/Rento/
+   # Backend için
+   cd COM5005-WebProgramming/Assignment\ 2/IKU-CARS/
    ```
 
 3. **🌐 HTML dosyalarını web tarayıcısında açın:**
    - Dosyaya çift tıklayın
    - Veya tarayıcıya sürükleyip bırakın
 
+4. **🏗️ Assignment 2 Backend Kurulumu:**
+   ```bash
+   # IKU-CARS projesini Visual Studio'da açın
+   cd COM5005-WebProgramming/Assignment\ 2/IKU-CARS/
+   # IKU-CARS.sln dosyasını Visual Studio ile açın
+   
+   # Package Manager Console'da şu komutları çalıştırın:
+   Enable-Migrations
+   Add-Migration InitialCreate
+   Update-Database
+   
+   # Projeyi derleyin ve çalıştırın (F5)
+   ```
+
 ---
 
 ## 📋 Gereksinimler
 
-- 🌐 Modern web tarayıcısı (Chrome, Firefox, Safari, Edge)
-- 💻 Metin editörü (VS Code, Sublime Text, Notepad++ vb.)
-- 📖 Temel HTML/CSS bilgisi
+### 🌐 Genel Gereksinimler
+- Modern web tarayıcısı (Chrome, Firefox, Safari, Edge)
+- Metin editörü (VS Code, Sublime Text, Notepad++ vb.)
+- Temel HTML/CSS bilgisi
+
+### 🏗️ Assignment 2 - Backend Gereksinimler
+- Visual Studio 2019 veya üzeri
+- .NET Framework 4.7.2
+- SQL Server LocalDB
+- IIS Express (Visual Studio ile birlikte gelir)
 
 ---
 
@@ -461,99 +486,116 @@ Bu ödev, öğrencilerin HTML, CSS ve JavaScript kullanarak kişisel bir web say
 - Renk teorisi ve tipografi
 - Web sayfası düzeni ve kullanıcı deneyimi
 
-### 📝 Assignment 2 - Araç Kiralama Sistemi (IKU-CAR)
-Bu ödev, öğrencilerin hem frontend (HTML/CSS/JS) hem de backend (ASP.NET MVC) teknolojilerini kullanarak kapsamlı bir araç kiralama sistemi geliştirmelerini amaçlamaktadır.
+### 📝 Assignment 2 - Araç Kiralama Sistemi (IKU-CARS)
+Bu ödev, öğrencilerin hem frontend (HTML/CSS/JS) hem de backend (ASP.NET MVC 5) teknolojilerini kullanarak kapsamlı bir araç kiralama sistemi geliştirmelerini amaçlamaktadır.
 
 #### 📁 Proje Yapısı
 - **📁 Ana Klasör:** `Assignment 2/`
 - **📄 Medya Dosyaları:**
-  - `Assignment 2.flv` - Proje tanıtım videosu
+  - `Assignment 2.flv` - Proje tanıtım videosu (224MB)
   - `Car Data.png` - Araç veri yapısı şeması
   - `Car Model.png` - Araç model diyagramı
   - `Car_Images/` - Araç görselleri klasörü
+  - `README.md` - Proje dokümantasyonu
 
 #### 🌐 Frontend Projesi - Rento
 - **📁 Klasör:** `HTML CSS JS/Rento/`
 - **📄 Ana Dosyalar:**
-  - `index.html` - Ana HTML sayfası (9404 bytes)
+  - `index.html` - Ana HTML sayfası (9.4KB)
   - `css/` - Bootstrap ve özel stil dosyaları (7 dosya)
   - `js/` - JavaScript kütüphaneleri ve özel scriptler (3 dosya)
   - `images/` - Web sitesi görselleri
 
 #### 🎨 Frontend Özellikleri
-- **🚗 Tema:** Araç kiralama web sitesi "IKU-CAR"
-- **📱 Responsive:** Bootstrap framework kullanımı
+- **🚗 Tema:** Modern araç kiralama web sitesi "Rento"
+- **📱 Responsive:** Bootstrap 5.2.3 framework kullanımı
 - **🎭 Kütüphaneler:**
-  - Bootstrap 4.x
-  - jQuery 3.x
+  - Bootstrap 5.2.3
+  - jQuery 3.7.0
   - Font Awesome icons
-  - Fancybox lightbox
-  - Custom scrollbar
+  - Modern CSS3 animasyonları
+  - Responsive tasarım
 
-#### 🏗️ Backend Projesi - IKU-CAR-MVC
-- **📁 Klasör:** `IKU-CAR-MVC/`
+#### 🏗️ Backend Projesi - IKU-CARS
+- **📁 Klasör:** `IKU-CARS/`
 - **📄 Proje Dosyaları:**
-  - `IKU-CAR-MVC.sln` - Visual Studio solution dosyası
-  - `IKU-CAR-MVC.csproj` - Proje konfigürasyon dosyası
+  - `IKU-CARS.sln` - Visual Studio solution dosyası
+  - `IKU-CARS.csproj` - Proje konfigürasyon dosyası
   - `Global.asax` & `Global.asax.cs` - Uygulama başlatma
   - `Web.config` - Web uygulaması konfigürasyonu
   - `packages.config` - NuGet paket bağımlılıkları
 
+#### 🛠️ Teknoloji Stack
+- **Backend:** ASP.NET MVC 5.2.9
+- **Framework:** .NET Framework 4.7.2
+- **ORM:** Entity Framework 6.4.4
+- **Veritabanı:** SQL Server LocalDB
+- **Frontend:** Bootstrap 5.2.3, jQuery 3.7.0
+
 #### 🎛️ MVC Mimarisi
 - **📁 Models/:**
-  - `Car.cs` - Araç entity modeli (CarId, Make, Model, Year, Price, Image, IsAvailable, Description, CarType)
-  - `CarRentalContext.cs` - Entity Framework DbContext
-  - `CarRentalInitializer.cs` - Veritabanı başlangıç verisi
-  - `CarViewModel.cs` - View için özel model
+  - `Car.cs` - Araç entity modeli
+  - `IKUCarDB.cs` - Entity Framework DbContext
+  - `SampleData.cs` - Örnek veri sınıfı
 
 - **📁 Controllers/:**
-  - `HomeController.cs` - Ana sayfa controller (Index, About, Contact, SearchResults)
-  - `CarsController.cs` - Araç yönetimi controller (CRUD işlemleri)
+  - `HomeController.cs` - Ana sayfa ve kullanıcı arayüzü
+  - `CarsController.cs` - Admin paneli CRUD işlemleri
 
 - **📁 Views/:**
-  - `Home/` - Ana sayfa view'ları (Index, About, Contact, SearchResults)
-  - `Cars/` - Araç yönetimi view'ları (Index, Create, Edit, Details, Delete)
-  - `Shared/` - Paylaşılan layout ve partial view'lar
-  - `_ViewStart.cshtml` - View başlatma ayarları
+  - `Home/Index.cshtml` - Ana sayfa
+  - `Home/Car_List.cshtml` - Araç listesi
+  - `Home/Car_Info.cshtml` - Araç detay sayfası
+  - `Cars/` - Admin paneli sayfaları (Index, Create, Edit, Delete, Details)
 
-- **📁 App_Start/:**
-  - Bundle, Filter ve Route konfigürasyonları
+#### 🚗 Araç Modeli ve Örnek Veriler
+Proje 16 farklı araç ile gelir:
+- **Audi:** R8, Sedan, Van, A3
+- **BMW:** Van, X5, i7, i8
+- **Hyundai:** Elantra, Sport, Tucson, Van, Bayon, i10, i20, Kona
 
-#### 🚗 Araç Modeli Özellikleri
-- **🔑 CarId:** Benzersiz araç kimliği
-- **🏭 Make:** Araç markası (50 karakter)
-- **🚙 Model:** Araç modeli (50 karakter)
-- **📅 Year:** Üretim yılı (1900-2030 arası)
-- **💰 Price:** Günlük kiralama ücreti (decimal)
-- **🖼️ Image:** Araç görseli URL'si
-- **✅ IsAvailable:** Müsaitlik durumu
-- **📝 Description:** Araç açıklaması
-- **🏷️ CarType:** Araç tipi (Economy, Compact, Midsize, Fullsize, Premium, Luxury, SUV, Convertible)
+#### 🌐 Sayfa Yapısı
+**Kullanıcı Arayüzü:**
+- Ana Sayfa (`/`) - Banner, filo tanıtımı ve rezervasyon formu
+- Araç Listesi (`/Home/Car_List`) - Tüm araçların listesi
+- Araç Detayı (`/Home/Car_Info/{id}`) - Seçilen aracın detay bilgileri
+
+**Admin Paneli:**
+- Araç Yönetimi (`/Cars`) - Araç listesi ve yönetim
+- Araç Ekleme (`/Cars/Create`) - Yeni araç ekleme formu
+- Araç Düzenleme (`/Cars/Edit/{id}`) - Araç bilgilerini düzenleme
+- Araç Silme (`/Cars/Delete/{id}`) - Araç silme onayı
 
 #### 🎯 Öğrenilen Konular
 - **Frontend Geliştirme:**
   - Modern responsive web tasarımı
-  - Bootstrap framework kullanımı
-  - jQuery ile DOM manipülasyonu
+  - Bootstrap 5.2.3 framework kullanımı
+  - jQuery 3.7.0 ile DOM manipülasyonu
   - CSS3 animasyonları ve geçişler
   - Font Awesome icon entegrasyonu
-  - Lightbox ve scrollbar kütüphaneleri
+  - Mobile-first responsive tasarım
 
 - **Backend Geliştirme:**
-  - ASP.NET MVC 5 framework mimarisi
-  - Entity Framework Code First yaklaşımı
+  - ASP.NET MVC 5.2.9 framework mimarisi
+  - Entity Framework 6.4.4 Code First yaklaşımı
   - Model-View-Controller tasarım deseni
   - CRUD (Create, Read, Update, Delete) işlemleri
-  - Data Annotations ile model validasyonu
+  - SQL Server LocalDB entegrasyonu
   - Razor View Engine kullanımı
   - Veritabanı başlangıç verisi (Database Seeding)
-  - Enum kullanımı ve veri modelleme
+  - Migration ve Code First yaklaşımı
+
+- **Proje Yönetimi:**
+  - Visual Studio solution ve proje yapısı
+  - NuGet paket yönetimi
+  - Web.config konfigürasyon yönetimi
+  - Debug ve Release ortam ayarları
 
 - **Full-Stack Entegrasyon:**
   - Frontend ve backend arasında veri akışı
-  - Web API ve MVC controller yapısı
-  - Veritabanı tasarımı ve ilişkileri
-  - Kullanıcı arayüzü ve veri yönetimi entegrasyonu
+  - MVC controller ve view entegrasyonu
+  - Veritabanı tasarımı ve model yapısı
+  - Admin paneli ve kullanıcı arayüzü geliştirme
 
 ---
 

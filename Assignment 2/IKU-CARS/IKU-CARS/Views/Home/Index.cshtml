@@ -1,0 +1,111 @@
+@{
+    ViewBag.Title = "Home";
+}
+
+<section class="banner_main">
+    <div class="container">
+        <div class="row d_flex">
+            <div class="col-md-12">
+                <div class="text-bg">
+                    <h1>We Are More Than A Car Rental Company</h1>
+                    <span>
+                        CORPORATE
+                        RENTAL
+                    </span>
+                    <p>
+                        We offer special mobility solutions for your company and we are happy to help you about business rental programs for your needs.
+                    </p>
+                    @Html.ActionLink("Read More", "Car_List", "Home", null, new { @class = "btn" })
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="car">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>OUR FLEET</h2>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 padding_leri">
+                <div class="car_box">
+                    <figure><img src="~/Images/car_img1.png" alt="#"/></figure>
+                    <h3>Hyundai</h3>
+                </div>
+            </div>
+            <div class="col-md-4 padding_leri">
+                <div class="car_box">
+                    <figure><img src="~/Images/car_img2.png" alt="#"/></figure>
+                    <h3>Audi</h3>
+                </div>
+            </div>
+            <div class="col-md-4 padding_leri">
+                <div class="car_box">
+                    <figure><img src="~/Images/car_img3.png" alt="#"/></figure>
+                    <h3>BMW X5</h3>
+                </div>
+            </div>
+
+            <div class="sign_btn">
+                @Html.ActionLink("Explore All", "Car_List", "Home")
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact" class="bestCar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-md-6 offset-md-6">
+                        <form class="main_form">
+                            <div class="titlepage">
+                                <h2>Start a Car Reservation</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 ">
+                                    <select>
+                                        <option value="0">Choose car Make</option>
+                                        <option value="Audi">Audi</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Hyundai">Hyundai</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <select>
+                                        <option value="0">Choose Car Type</option>
+                                        <option value="Normal">Normal</option>
+                                        <option value="Sport">Sport</option>
+                                        <option value="Family">Family</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <select>
+                                        <option value="0">Price of Rent</option>
+                                        <option value="1">Under 50</option>
+                                        <option value="2">50-100</option>
+                                        <option value="3">Over 100</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-12">
+                                    <button type="button" class="find_btn" onclick="location.href='@Url.Action("Car_List", "Home")'">Find The Best Car</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
