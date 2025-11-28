@@ -1,0 +1,33 @@
+@model CardRegisteration.Models.Card
+
+<html>
+<head>
+    <title>Sonuc</title>
+</head>
+<body>
+    <div>
+        @if (Model.Choice == true)
+        {
+            <h1>Thanks!</h1>
+            <h2>Your card application has been received.</h2>
+            <p>
+                <b>
+                    Name: @ViewBag.name<br />
+                    SurName: @ViewBag.surname<br />
+                    Email: @ViewBag.email<br />
+                    Phone: @ViewBag.phone<br />
+                    Gender: @ViewBag.gender<br />
+                </b>
+            </p>
+            @Html.ActionLink("Back to Home", "Offer")
+        }
+        else
+        {
+            <h1>Thanks!</h1>
+            <h2>You don't have a card application.</h2>
+            @Html.ActionLink("Back to Home", "Offer")
+        }
+    </div>
+</body>
+</html>
+

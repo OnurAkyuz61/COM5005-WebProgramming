@@ -309,6 +309,84 @@ Bu laboratuvar ASP.NET Core MVC'de View ve Model yapılarının kullanımını k
   - SQLite database entegrasyonu
   - Model-View-Controller mimarisi
 
+### 🔬 Lab 11 - ASP.NET MVC5 HTML Helpers & Form Validation
+Bu laboratuvar ASP.NET MVC5'te HTML Helpers ve form doğrulama tekniklerini kapsamaktadır:
+
+#### 💳 CardRegisteration - Kredi Kartı Başvuru Formu
+- **📁 Klasör:** `CardRegisteration/`
+- **📄 Ana Dosyalar:**
+  - `Lab11_ ASPNet_HTML_Helpers_Form_Validation.pdf` - Laboratuvar kılavuzu
+  - `CardRegisteration.csproj` - Proje konfigürasyon dosyası
+  - `Global.asax` & `Global.asax.cs` - Uygulama başlatma ayarları
+  - `Web.config` - Web uygulaması konfigürasyonu
+  - `packages.config` - NuGet paket bağımlılıkları
+
+#### 🎛️ MVC Yapısı
+- **📁 Models/:**
+  - `Card.cs` - Kredi kartı başvuru modeli (Data Annotations ile validasyon)
+
+- **📁 Controllers/:**
+  - `HomeController.cs` - Ana controller (Offer, Form GET/POST action'ları)
+
+- **📁 Views/:**
+  - `Home/Offer.cshtml` - Ana sayfa (kredi kartı teklifi)
+  - `Home/Form.cshtml` - Başvuru formu (HTML Helpers ile)
+  - `Home/Result.cshtml` - Sonuç sayfası (başvuru onayı)
+  - `_ViewStart.cshtml` - View başlatma ayarları
+
+#### 🎨 HTML Helpers Kullanımı
+- **📝 Form Helpers:**
+  - `@Html.BeginForm()` - Form başlatma
+  - `@Html.TextBoxFor()` - Text input alanları
+  - `@Html.RadioButton()` - Radio button seçimi
+  - `@Html.DropDownListFor()` - Dropdown list seçimi
+  - `@Html.ValidationSummary()` - Validasyon hata özeti
+  - `@Html.ActionLink()` - Action link oluşturma
+
+#### ✅ Form Validasyonu
+- **📋 Validasyon Kuralları:**
+  - `[Required]` - Zorunlu alan kontrolü
+  - `[RegularExpression]` - Email format kontrolü
+  - `ModelState.IsValid` - Model doğrulama kontrolü
+  - Custom error mesajları
+
+#### 📋 Form Alanları
+- **👤 Kişisel Bilgiler:**
+  - Name (Ad) - Zorunlu
+  - SurName (Soyad) - Zorunlu
+  - Email (E-posta) - Zorunlu + format kontrolü
+  - Phone (Telefon) - Zorunlu
+  - Gender (Cinsiyet) - Radio button (Male/Female)
+  - Choice (Kart İsteği) - Dropdown (Yes/No)
+
+#### 🌐 Sayfa Akışı
+1. **Ana Sayfa (`/Home/Offer`):**
+   - "Would you like to have a credit card?" sorusu
+   - "Application Form" linki ile form sayfasına yönlendirme
+
+2. **Form Sayfası (`/Home/Form`):**
+   - GET: Boş form gösterimi
+   - POST: Form validasyonu ve işleme
+
+3. **Sonuç Sayfası (`/Home/Result`):**
+   - Başvuru başarılı: Kullanıcı bilgileri gösterimi
+   - Başvuru reddedildi: Bilgilendirme mesajı
+
+- **🎯 Öğrenilen Konular:**
+  - ASP.NET MVC5 HTML Helpers kullanımı
+  - Strongly-typed HTML Helpers (@Html.TextBoxFor, @Html.DropDownListFor)
+  - Data Annotations ile model validasyonu
+  - ModelState.IsValid ile form doğrulama kontrolü
+  - ValidationSummary ile hata mesajları gösterimi
+  - Model binding ve form verilerini model'e bağlama
+  - ViewBag ile controller'dan view'a veri aktarımı
+  - GET ve POST action method'ları kullanımı
+  - Razor View Engine ile dinamik içerik oluşturma
+  - Form validasyonu ve kullanıcı geri bildirimi
+  - Regular Expression ile email format kontrolü
+  - Required attribute ile zorunlu alan kontrolü
+  - Custom error mesajları tanımlama
+
 ---
 
 ## 🚀 Nasıl Kullanılır
@@ -337,6 +415,10 @@ Bu laboratuvar ASP.NET Core MVC'de View ve Model yapılarının kullanımını k
    cd COM5005-WebProgramming/Lab\ 9/
    # veya
    cd COM5005-WebProgramming/Lab\ 10/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 11/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 11/
    # veya Assignment için
    cd COM5005-WebProgramming/Assignment\ 1/2200005590\ -\ Assignment\ 1/
    # veya
@@ -351,7 +433,22 @@ Bu laboratuvar ASP.NET Core MVC'de View ve Model yapılarının kullanımını k
    - Dosyaya çift tıklayın
    - Veya tarayıcıya sürükleyip bırakın
 
-4. **🏗️ Assignment 2 Backend Kurulumu:**
+4. **🏗️ Lab 11 - CardRegisteration Kurulumu:**
+   ```bash
+   # CardRegisteration projesini Visual Studio'da açın
+   cd COM5005-WebProgramming/Lab\ 11/CardRegisteration/
+   # CardRegisteration.csproj dosyasını Visual Studio ile açın
+   
+   # NuGet Package Manager ile gerekli paketleri yükleyin:
+   # - Microsoft.AspNet.Mvc (v5.2.7)
+   # - System.ComponentModel.DataAnnotations
+   
+   # Projeyi derleyin ve çalıştırın (F5)
+   # Ana sayfa: /Home/Offer
+   # Form sayfası: /Home/Form
+   ```
+
+5. **🏗️ Assignment 2 Backend Kurulumu:**
    ```bash
    # IKU-CARS projesini Visual Studio'da açın
    cd COM5005-WebProgramming/Assignment\ 2/IKU-CARS/
@@ -431,6 +528,14 @@ Bu laboratuvar çalışmaları ile öğrenciler:
 - ✅ Code First Migration ile veritabanı şema yönetimi gerçekleştirir
 - ✅ MVC Scaffolding ile otomatik kod üretimi kullanır
 - ✅ SQLite ile hafif veritabanı çözümleri uygular
+- ✅ ASP.NET MVC5 HTML Helpers ile form oluşturur
+- ✅ Strongly-typed HTML Helpers kullanır (@Html.TextBoxFor, @Html.DropDownListFor)
+- ✅ Data Annotations ile model validasyonu uygular
+- ✅ ModelState.IsValid ile form doğrulama kontrolü yapar
+- ✅ ValidationSummary ile hata mesajları gösterir
+- ✅ Model binding ile form verilerini model'e bağlar
+- ✅ Regular Expression ile email format kontrolü yapar
+- ✅ Custom error mesajları tanımlar ve gösterir
 
 ### 📝 Assignment 1 - Kişisel Web Sayfası Projesi
 Bu ödev, öğrencilerin HTML, CSS ve JavaScript kullanarak kişisel bir web sayfası oluşturmalarını amaçlamaktadır.

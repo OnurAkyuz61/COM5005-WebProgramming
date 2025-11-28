@@ -1,0 +1,30 @@
+@model CardRegisteration.Models.Card
+@using System.Collections.Generic
+@using System.Web.Mvc
+
+<html>
+<head>
+    <title>Credit Card Registration</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>Your Name : @Html.TextBoxFor(x => x.Name)</p>
+        <p>Your Surname : @Html.TextBoxFor(x => x.SurName)</p>
+        <p>E-Mail Adress : @Html.TextBoxFor(x => x.Email)</p>
+        <p>Phone Number: @Html.TextBoxFor(x => x.Phone)</p>
+        <p>Gender: </p>
+        <p>Male @Html.RadioButton("Gender", "Male")</p>
+        <p>Female @Html.RadioButton("Gender", "Female")</p>
+        <p>Do you want a card?</p>
+        @Html.DropDownListFor(x => x.Choice, new List<SelectListItem> {
+            new SelectListItem() {Text = "Yes, I want a card", Value = bool.TrueString},
+            new SelectListItem() {Text = "No, I don't want a card", Value = bool.FalseString}
+        }, "Choose one!")
+        <input type="submit" value="Submit" />
+    }
+    <link rel="stylesheet" href="@Href("~/Content/Site.css")" type="text/css" />
+</body>
+</html>
+
