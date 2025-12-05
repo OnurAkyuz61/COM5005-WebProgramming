@@ -387,6 +387,140 @@ Bu laboratuvar ASP.NET MVC5'te HTML Helpers ve form doğrulama tekniklerini kaps
   - Required attribute ile zorunlu alan kontrolü
   - Custom error mesajları tanımlama
 
+### 🔬 Lab 12 - ASP.NET MVC5 Authentication & Authorization
+Bu laboratuvar ASP.NET MVC5'te kimlik doğrulama (Authentication) ve yetkilendirme (Authorization) tekniklerini kapsamaktadır:
+
+#### 🔐 Authentication - Kimlik Doğrulama Sistemi
+- **📁 Klasör:** `Authentication/`
+- **📄 Ana Dosyalar:**
+  - `Lab12_ ASPNet_Authentication_Authorization.pdf` - Laboratuvar kılavuzu
+  - `Authentication.csproj` - Proje konfigürasyon dosyası
+  - `Global.asax` & `Global.asax.cs` - Uygulama başlatma ayarları
+  - `Web.config` - Web uygulaması konfigürasyonu (FormsAuthentication ayarları)
+  - `packages.config` - NuGet paket bağımlılıkları
+
+#### 🎛️ MVC Yapısı
+- **📁 Models/:**
+  - `User.cs` - Kullanıcı modeli (UserId, Username, Email, Password)
+  - `DbPersonel.cs` - Entity Framework DbContext (Users DbSet)
+
+- **📁 Controllers/:**
+  - `SecurityController.cs` - Kimlik doğrulama controller'ı (Login, Logout)
+  - `PersonelManageController.cs` - Kullanıcı yönetimi controller'ı (CRUD işlemleri)
+
+- **📁 Views/:**
+  - `Security/Login.cshtml` - Giriş sayfası (Username ve Password alanları)
+  - `PersonelManage/Index.cshtml` - Kullanıcı listesi (Sadece yetkili kullanıcılar)
+  - `PersonelManage/Create.cshtml` - Yeni kullanıcı kayıt formu
+  - `PersonelManage/Edit.cshtml` - Kullanıcı düzenleme formu
+  - `PersonelManage/Details.cshtml` - Kullanıcı detay sayfası
+  - `PersonelManage/Delete.cshtml` - Kullanıcı silme onay sayfası
+  - `Shared/_Layout.cshtml` - Ana layout sayfası
+
+#### 🔑 Authentication (Kimlik Doğrulama)
+- **🔐 FormsAuthentication Kullanımı:**
+  - `FormsAuthentication.SetAuthCookie()` - Kullanıcı oturum açma
+  - `FormsAuthentication.SignOut()` - Kullanıcı oturum kapatma
+  - Authentication cookie yönetimi
+  - "Remember me" özelliği
+
+- **📋 Login İşlemi:**
+  - Kullanıcı adı ve şifre kontrolü
+  - Veritabanında kullanıcı doğrulama
+  - Başarılı giriş sonrası yönlendirme
+  - Hatalı giriş mesajları
+
+#### 🛡️ Authorization (Yetkilendirme)
+- **🔒 [Authorize] Attribute:**
+  - Controller ve Action seviyesinde yetkilendirme
+  - Yetkisiz erişim engelleme
+  - Oturum açmamış kullanıcıların sayfaya erişimini engelleme
+
+- **📝 Kullanım Örnekleri:**
+  ```csharp
+  [Authorize] // Tüm action'lar için yetkilendirme
+  public class PersonelManageController : Controller
+  {
+      [Authorize] // Sadece bu action için yetkilendirme
+      public ActionResult Index()
+      {
+          // Sadece giriş yapmış kullanıcılar erişebilir
+      }
+  }
+  ```
+
+#### 👥 Kullanıcı Yönetimi (CRUD)
+- **📊 PersonelManage Controller:**
+  - `Index` - Tüm kullanıcıları listeleme (Yetkili erişim)
+  - `Create` - Yeni kullanıcı kaydı oluşturma
+  - `Edit` - Kullanıcı bilgilerini güncelleme
+  - `Details` - Kullanıcı detaylarını görüntüleme
+  - `Delete` - Kullanıcı silme işlemi
+
+#### 🌐 Sayfa Akışı
+1. **Giriş Sayfası (`/Security/Login`):**
+   - Kullanıcı adı ve şifre girişi
+   - "Remember me" checkbox
+   - "Register here" linki ile kayıt sayfasına yönlendirme
+   - Hatalı giriş durumunda hata mesajı gösterimi
+
+2. **Kullanıcı Listesi (`/PersonelManage/Index`):**
+   - Sadece giriş yapmış kullanıcılar erişebilir ([Authorize])
+   - Tüm kullanıcıların listesi
+   - CRUD işlemleri için linkler
+
+3. **Kullanıcı Kayıt (`/PersonelManage/Create`):**
+   - Yeni kullanıcı kayıt formu
+   - Username, Email, Password alanları
+   - Validasyon kontrolleri
+
+4. **Oturum Kapatma (`/Security/Logout`):**
+   - FormsAuthentication.SignOut() ile oturum kapatma
+   - Login sayfasına yönlendirme
+
+#### 🗄️ Veritabanı Yapısı
+- **📊 User Model:**
+  - `UserId` (int) - Primary Key
+  - `Username` (string) - Kullanıcı adı (Required)
+  - `Email` (string) - E-posta adresi (Required, EmailAddress validation)
+  - `Password` (string) - Şifre (Required)
+
+- **🔧 Entity Framework:**
+  - Code First yaklaşımı
+  - DbPersonel DbContext
+  - Users DbSet ile kullanıcı yönetimi
+
+#### ✅ Form Validasyonu
+- **📋 Data Annotations:**
+  - `[Required]` - Zorunlu alan kontrolü
+  - `[EmailAddress]` - Email format kontrolü
+  - Custom error mesajları
+
+- **🔒 Güvenlik Özellikleri:**
+  - `[ValidateAntiForgeryToken]` - CSRF koruması
+  - Password alanı type="password" ile gizleme
+  - FormsAuthentication ile güvenli oturum yönetimi
+
+- **🎯 Öğrenilen Konular:**
+  - ASP.NET MVC5 FormsAuthentication kullanımı
+  - [Authorize] attribute ile yetkilendirme
+  - FormsAuthentication.SetAuthCookie() ile oturum açma
+  - FormsAuthentication.SignOut() ile oturum kapatma
+  - Authentication cookie yönetimi
+  - Yetkisiz erişim engelleme teknikleri
+  - Controller ve Action seviyesinde yetkilendirme
+  - Entity Framework Code First ile kullanıcı yönetimi
+  - CRUD işlemleri ile kullanıcı veritabanı yönetimi
+  - Login ve Logout işlemleri
+  - Kullanıcı doğrulama ve veritabanı sorgulama
+  - ViewBag ile hata mesajları gösterimi
+  - HTML Helpers ile login formu oluşturma
+  - Password alanı güvenliği
+  - "Remember me" özelliği implementasyonu
+  - ValidateAntiForgeryToken ile CSRF koruması
+  - EmailAddress validation attribute kullanımı
+  - Güvenli web uygulaması geliştirme prensipleri
+
 ---
 
 ## 🚀 Nasıl Kullanılır
@@ -419,6 +553,8 @@ Bu laboratuvar ASP.NET MVC5'te HTML Helpers ve form doğrulama tekniklerini kaps
    cd COM5005-WebProgramming/Lab\ 11/
    # veya
    cd COM5005-WebProgramming/Lab\ 11/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 12/
    # veya Assignment için
    cd COM5005-WebProgramming/Assignment\ 1/2200005590\ -\ Assignment\ 1/
    # veya
@@ -448,7 +584,28 @@ Bu laboratuvar ASP.NET MVC5'te HTML Helpers ve form doğrulama tekniklerini kaps
    # Form sayfası: /Home/Form
    ```
 
-5. **🏗️ Assignment 2 Backend Kurulumu:**
+5. **🏗️ Lab 12 - Authentication Kurulumu:**
+   ```bash
+   # Authentication projesini Visual Studio'da açın
+   cd COM5005-WebProgramming/Lab\ 12/Authentication/
+   # Authentication.csproj dosyasını Visual Studio ile açın
+   
+   # NuGet Package Manager ile gerekli paketleri yükleyin:
+   # - Microsoft.AspNet.Mvc (v5.2.7)
+   # - Entity Framework 6.x
+   # - System.Web.Security (FormsAuthentication için)
+   
+   # Package Manager Console'da veritabanı oluşturma:
+   # Enable-Migrations
+   # Add-Migration InitialCreate
+   # Update-Database
+   
+   # Projeyi derleyin ve çalıştırın (F5)
+   # Giriş sayfası: /Security/Login
+   # Kullanıcı listesi: /PersonelManage/Index (Giriş yapmış kullanıcılar için)
+   ```
+
+6. **🏗️ Assignment 2 Backend Kurulumu:**
    ```bash
    # IKU-CARS projesini Visual Studio'da açın
    cd COM5005-WebProgramming/Assignment\ 2/IKU-CARS/
@@ -536,6 +693,18 @@ Bu laboratuvar çalışmaları ile öğrenciler:
 - ✅ Model binding ile form verilerini model'e bağlar
 - ✅ Regular Expression ile email format kontrolü yapar
 - ✅ Custom error mesajları tanımlar ve gösterir
+- ✅ ASP.NET MVC5 FormsAuthentication ile kimlik doğrulama yapar
+- ✅ [Authorize] attribute ile yetkilendirme uygular
+- ✅ FormsAuthentication.SetAuthCookie() ile oturum yönetimi yapar
+- ✅ FormsAuthentication.SignOut() ile güvenli çıkış işlemi gerçekleştirir
+- ✅ Authentication cookie yönetimi yapar
+- ✅ Controller ve Action seviyesinde yetkilendirme uygular
+- ✅ Yetkisiz erişim engelleme teknikleri kullanır
+- ✅ Kullanıcı doğrulama ve veritabanı sorgulama yapar
+- ✅ Login ve Logout işlemleri geliştirir
+- ✅ "Remember me" özelliği implementasyonu yapar
+- ✅ ValidateAntiForgeryToken ile CSRF koruması uygular
+- ✅ Güvenli web uygulaması geliştirme prensipleri öğrenir
 
 ### 📝 Assignment 1 - Kişisel Web Sayfası Projesi
 Bu ödev, öğrencilerin HTML, CSS ve JavaScript kullanarak kişisel bir web sayfası oluşturmalarını amaçlamaktadır.
