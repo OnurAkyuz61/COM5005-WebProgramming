@@ -1,0 +1,33 @@
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<input type="text" id="txtname" />
+<input type="button" value="Search" id="list" />
+<div id="Results"></div>
+
+<script>
+    $(document).ready(function () {
+        $('#list').click(function () {
+            var name = $("#txtname").val();
+            $.ajax({
+                type: "post",
+                url: "/Home/Students/",
+                dataType: "json",
+                data: { 'name': name },
+                success: function (data) {
+                    $("#Results").empty();
+                    if (data.length > 0) {
+                        $.each(data, function (index, item) {
+                            $("#Results").append('<p>ID: ' + item.Id + ', Name: ' + item.Name + ', Addon: ' + item.Addon + '</p>');
+                        });
+                    } else {
+                        $("#Results").append('<p>No results found.</p>');
+                    }
+                },
+                error: function (error) {
+                    console.log('Error:', error);
+                }
+            });
+        });
+    });
+</script>
+

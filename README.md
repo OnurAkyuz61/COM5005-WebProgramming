@@ -521,6 +521,180 @@ Bu laboratuvar ASP.NET MVC5'te kimlik doğrulama (Authentication) ve yetkilendir
   - EmailAddress validation attribute kullanımı
   - Güvenli web uygulaması geliştirme prensipleri
 
+### 🔬 Lab 13 - ASP.NET MVC5 AJAX & jQuery
+Bu laboratuvar ASP.NET MVC5'te AJAX ve jQuery kullanımını kapsamaktadır:
+
+#### 🔄 Ajax_JQuery_Project - AJAX ve jQuery Uygulaması
+- **📁 Klasör:** `Ajax_JQuery_Project/`
+- **📄 Ana Dosyalar:**
+  - `Lab13_ ASPNet_Ajax_JQuery.pdf` - Laboratuvar kılavuzu
+  - `Global.asax` & `Global.asax.cs` - Uygulama başlatma ayarları
+  - `Web.config` - Web uygulaması konfigürasyonu
+  - `packages.config` - NuGet paket bağımlılıkları
+
+#### 🎛️ MVC Yapısı
+- **📁 Models/:**
+  - `StudentModel.cs` - Öğrenci modeli (Id, Name, Addon)
+
+- **📁 Controllers/:**
+  - `HomeController.cs` - Ana controller (Index, Form, Index2, Form2, Search, Students)
+
+- **📁 Views/:**
+  - `Home/Index.cshtml` - Ajax.BeginForm ile unobtrusive AJAX örneği
+  - `Home/Index2.cshtml` - jQuery.post ile AJAX örneği
+  - `Home/Search.cshtml` - jQuery.ajax ile JSON veri çekme örneği
+  - `Shared/_Layout.cshtml` - Ana layout sayfası
+
+- **📁 Scripts/:**
+  - `jquery-1.8.0.js` & `jquery-1.8.0.min.js` - jQuery kütüphanesi
+  - `jquery.unobtrusive-ajax.js` & `jquery.unobtrusive-ajax.min.js` - Unobtrusive AJAX
+
+#### 🔄 AJAX Yaklaşımları
+
+##### 1️⃣ Unobtrusive AJAX (Ajax.BeginForm)
+- **📝 Kullanım:**
+  - `Ajax.BeginForm()` ile form oluşturma
+  - `AjaxOptions` ile AJAX ayarları
+  - `UpdateTargetId` ile sonuç gösterme
+  - `LoadingElementId` ile yükleme göstergesi
+  - `OnSuccess` ve `OnFailure` callback'leri
+
+- **🎯 Özellikler:**
+  - Sayfa yenilenmeden form gönderimi
+  - Asenkron veri işleme
+  - Loading indicator gösterimi
+  - Başarı/hata mesajları
+
+##### 2️⃣ jQuery.post() ile AJAX
+- **📝 Kullanım:**
+  - `$.post()` ile AJAX isteği
+  - JavaScript ile form verilerini toplama
+  - `JavaScript()` return type ile dinamik kod çalıştırma
+  - DOM manipülasyonu
+
+- **🎯 Özellikler:**
+  - Pure HTML form kullanımı
+  - jQuery ile manuel AJAX çağrısı
+  - Dinamik JavaScript kod üretimi
+  - Callback fonksiyonları
+
+##### 3️⃣ jQuery.ajax() ile JSON Veri Çekme
+- **📝 Kullanım:**
+  - `$.ajax()` ile detaylı AJAX kontrolü
+  - `JsonResult` ile JSON veri döndürme
+  - JSON veri parse etme
+  - Dinamik HTML oluşturma
+
+- **🎯 Özellikler:**
+  - JSON formatında veri alışverişi
+  - Arama fonksiyonelliği
+  - Dinamik sonuç listesi
+  - Error handling
+
+#### 📋 Form İşlemleri
+
+##### Index.cshtml - Unobtrusive AJAX Form
+- **📝 Form Alanları:**
+  - Id (int) - TextBoxFor
+  - Name (string) - TextBoxFor
+  - Addon (bool) - CheckBoxFor
+
+- **🔄 AJAX Özellikleri:**
+  - `UpdateTargetId = "id1"` - Sonuç gösterim alanı
+  - `LoadingElementId = "LoadingImage"` - Yükleme göstergesi
+  - `OnSuccess = "onSuccess_Message"` - Başarı callback'i
+  - `OnFailure = "onFailure_Message"` - Hata callback'i
+
+##### Index2.cshtml - jQuery.post() Form
+- **📝 Form Alanları:**
+  - Id (text input)
+  - Name (text input)
+  - Addon (checkbox)
+
+- **🔄 AJAX Özellikleri:**
+  - `$.post("/Home/Form2", { sm: data })` - AJAX isteği
+  - `JavaScript()` return type - Dinamik kod çalıştırma
+  - `$('#output').html()` - DOM güncelleme
+
+##### Search.cshtml - JSON Arama
+- **📝 Arama Fonksiyonu:**
+  - Text input ile öğrenci adı arama
+  - `JsonResult Students(string name)` action'ı
+  - JSON formatında sonuç döndürme
+  - Dinamik sonuç listesi oluşturma
+
+#### 🗄️ Veri Modeli
+- **📊 StudentModel:**
+  - `Id` (int) - Öğrenci ID
+  - `Name` (string) - Öğrenci adı
+  - `Addon` (bool) - Ek özellik
+
+- **📋 Örnek Veriler:**
+  - Ayse (Id: 1, Addon: false)
+  - Ali (Id: 2, Addon: true)
+  - Can (Id: 3, Addon: false)
+
+#### 🌐 Controller Action'ları
+
+##### Form Action (POST)
+- **📝 İşlev:**
+  - Model binding ile form verilerini alma
+  - ModelState.IsValid kontrolü
+  - Content() ile HTML string döndürme
+  - UpdateTargetId'e sonuç yazma
+
+##### Form2 Action (POST)
+- **📝 İşlev:**
+  - jQuery.post ile gelen veriyi işleme
+  - JavaScript() return type ile dinamik kod
+  - `$('#output').html()` ile DOM güncelleme
+
+##### Students Action (POST - JsonResult)
+- **📝 İşlev:**
+  - Öğrenci listesi oluşturma
+  - LINQ ile filtreleme (Where)
+  - Json() ile JSON formatında döndürme
+  - `JsonRequestBehavior.AllowGet` ile GET isteklerine izin
+
+#### 🎨 jQuery Kullanımı
+- **📚 jQuery Versiyonu:**
+  - jQuery 1.8.0 (Unobtrusive AJAX için)
+  - jQuery 3.6.4 (Search sayfası için)
+
+- **🔧 jQuery Metodları:**
+  - `$.post()` - POST isteği gönderme
+  - `$.ajax()` - Detaylı AJAX kontrolü
+  - `$.each()` - Dizi/obje iterasyonu
+  - `$().val()` - Input değeri alma
+  - `$().html()` - HTML içerik ayarlama
+  - `$().empty()` - İçerik temizleme
+  - `$().is(':checked')` - Checkbox kontrolü
+  - `$(document).ready()` - Sayfa yükleme kontrolü
+
+- **🎯 Öğrenilen Konular:**
+  - ASP.NET MVC5 AJAX kullanımı
+  - Ajax.BeginForm() ile unobtrusive AJAX
+  - AjaxOptions ile AJAX konfigürasyonu
+  - UpdateTargetId ile sonuç gösterimi
+  - LoadingElementId ile yükleme göstergesi
+  - OnSuccess ve OnFailure callback'leri
+  - jQuery.post() ile AJAX istekleri
+  - JavaScript() return type kullanımı
+  - jQuery.ajax() ile detaylı AJAX kontrolü
+  - JsonResult ile JSON veri döndürme
+  - JSON veri parse etme ve işleme
+  - DOM manipülasyonu ile dinamik içerik
+  - Asenkron form gönderimi
+  - Sayfa yenilenmeden veri işleme
+  - jQuery ile form verilerini toplama
+  - Model binding ile AJAX veri alma
+  - Content() ile HTML string döndürme
+  - Error handling ve callback fonksiyonları
+  - LINQ ile veri filtreleme
+  - Dinamik HTML oluşturma
+  - Arama fonksiyonelliği implementasyonu
+  - Unobtrusive JavaScript prensipleri
+
 ---
 
 ## 🚀 Nasıl Kullanılır
@@ -555,6 +729,8 @@ Bu laboratuvar ASP.NET MVC5'te kimlik doğrulama (Authentication) ve yetkilendir
    cd COM5005-WebProgramming/Lab\ 11/
    # veya
    cd COM5005-WebProgramming/Lab\ 12/
+   # veya
+   cd COM5005-WebProgramming/Lab\ 13/
    # veya Assignment için
    cd COM5005-WebProgramming/Assignment\ 1/2200005590\ -\ Assignment\ 1/
    # veya
@@ -605,7 +781,24 @@ Bu laboratuvar ASP.NET MVC5'te kimlik doğrulama (Authentication) ve yetkilendir
    # Kullanıcı listesi: /PersonelManage/Index (Giriş yapmış kullanıcılar için)
    ```
 
-6. **🏗️ Assignment 2 Backend Kurulumu:**
+6. **🏗️ Lab 13 - Ajax_JQuery_Project Kurulumu:**
+   ```bash
+   # Ajax_JQuery_Project projesini Visual Studio'da açın
+   cd COM5005-WebProgramming/Lab\ 13/Ajax_JQuery_Project/
+   # Proje dosyasını Visual Studio ile açın
+   
+   # NuGet Package Manager ile gerekli paketleri yükleyin:
+   # - Microsoft.AspNet.Mvc (v5.2.7)
+   # - jQuery (v1.8.0 veya üzeri)
+   # - Microsoft.jQuery.Unobtrusive.Ajax
+   
+   # Projeyi derleyin ve çalıştırın (F5)
+   # Unobtrusive AJAX örneği: /Home/Index
+   # jQuery.post örneği: /Home/Index2
+   # JSON arama örneği: /Home/Search
+   ```
+
+7. **🏗️ Assignment 2 Backend Kurulumu:**
    ```bash
    # IKU-CARS projesini Visual Studio'da açın
    cd COM5005-WebProgramming/Assignment\ 2/IKU-CARS/
@@ -705,6 +898,28 @@ Bu laboratuvar çalışmaları ile öğrenciler:
 - ✅ "Remember me" özelliği implementasyonu yapar
 - ✅ ValidateAntiForgeryToken ile CSRF koruması uygular
 - ✅ Güvenli web uygulaması geliştirme prensipleri öğrenir
+- ✅ ASP.NET MVC5 AJAX kullanımı öğrenir
+- ✅ Ajax.BeginForm() ile unobtrusive AJAX uygular
+- ✅ AjaxOptions ile AJAX konfigürasyonu yapar
+- ✅ UpdateTargetId ile sonuç gösterimi yapar
+- ✅ LoadingElementId ile yükleme göstergesi ekler
+- ✅ OnSuccess ve OnFailure callback'leri kullanır
+- ✅ jQuery.post() ile AJAX istekleri gönderir
+- ✅ JavaScript() return type ile dinamik kod çalıştırır
+- ✅ jQuery.ajax() ile detaylı AJAX kontrolü yapar
+- ✅ JsonResult ile JSON veri döndürür
+- ✅ JSON veri parse eder ve işler
+- ✅ DOM manipülasyonu ile dinamik içerik oluşturur
+- ✅ Asenkron form gönderimi yapar
+- ✅ Sayfa yenilenmeden veri işleme gerçekleştirir
+- ✅ jQuery ile form verilerini toplar
+- ✅ Model binding ile AJAX veri alır
+- ✅ Content() ile HTML string döndürür
+- ✅ Error handling ve callback fonksiyonları kullanır
+- ✅ LINQ ile veri filtreleme yapar
+- ✅ Dinamik HTML oluşturma teknikleri öğrenir
+- ✅ Arama fonksiyonelliği implementasyonu yapar
+- ✅ Unobtrusive JavaScript prensipleri uygular
 
 ### 📝 Assignment 1 - Kişisel Web Sayfası Projesi
 Bu ödev, öğrencilerin HTML, CSS ve JavaScript kullanarak kişisel bir web sayfası oluşturmalarını amaçlamaktadır.
